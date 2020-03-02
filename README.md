@@ -4,6 +4,8 @@
 Python script to convert the DUNE TDR glossary from LaTeX to HTML.
 The automatically created webpage has all DUNE words listed, with cross-references done via HTML links. A horizontal menu with all letters of the alphabet allows for a quick access.
 
+Demo [here](http://davidc.web.cern.ch/davidc/abcdune/).
+
 ## Script
 ```sh
 python3 convert_glossary_tex_to_html.py [-h] [infile]
