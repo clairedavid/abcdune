@@ -1,0 +1,53 @@
+html, body {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 15px;
+    color: #595959;
+    line-height: 25px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    font-family: 'Open Sans', sans-serif, Helvetica,Arial;
+}
+
+#content {
+    width: 1024px;
+    margin: auto;
+}
+
+#header {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top:10px;
+    width: 400px;
+}
+.alphabet_menu {
+    font-size: 25px;
+}
+
+h1 {
+    color: #2D2D2D;
+}
+
+a {
+    color: #85AFD1;
+
+}
+
+a:hover {
+    color: #1B4D92;
+}
+
+dt {
+    margin-top:10px;
+    font-weight: bold;
+}
+
+dd {
+    margin-top:-1px;
+    }
+
