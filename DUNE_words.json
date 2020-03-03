@@ -292,7 +292,7 @@
         "type": "word"
     },
     "calci": {
-        "defHTML": "Calibration and Cryogenic Instrumentation",
+        "defHTML": "Calibration and Cryogenic Instrumentation.",
         "defLaTeX": "Calibration and Cryogenic Instrumentation",
         "term": "CALCI",
         "type": "word"
@@ -1551,8 +1551,8 @@
     },
     "iov": {
         "abbrev": "IOV",
-        "defHTML": "Interval of Validity",
-        "defLaTeX": "Interval of Validity",
+        "defHTML": "Interval over which something is valid.",
+        "defLaTeX": "Interval over which something is valid",
         "term": "Interval of Validity",
         "type": "abbrev"
     },

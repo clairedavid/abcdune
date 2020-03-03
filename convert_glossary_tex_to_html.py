@@ -162,7 +162,7 @@ def main():
 
     #===== Export in JSON file =====
     # (could later read only read from JSON)
-    jsonfile = 'DUNE_glossary.json'
+    jsonfile = 'DUNE_words.json'
     with open(jsonfile, 'w') as fp:
         json.dump(DUNEdict, fp, indent=4, sort_keys=True)
     print("DUNE words exported in JSON file " + jsonfile)
