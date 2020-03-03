@@ -215,8 +215,8 @@ def main():
                     content += '  <dt id = "' + key + '">' + info["term"] + '</dt>\n'
                     content += '  <dd>'
                 content += info["defHTML"] + '</dd>\n'
-            # end of letter block
-            content += '</dl>\n'
+        # end of letter block
+        content += '</dl>\n'
     # end of HTML:
     content += '<br>\n</div>\n</body>\n</html>'
 

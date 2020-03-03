@@ -1553,7 +1553,7 @@
         "abbrev": "IOV",
         "defHTML": "Interval over which something is valid.",
         "defLaTeX": "Interval over which something is valid",
-        "term": "Interval of Validity",
+        "term": "interval of validity",
         "type": "abbrev"
     },
     "ipc": {
