@@ -291,6 +291,12 @@
         "term": "CAFAna",
         "type": "word"
     },
+    "calci": {
+        "defHTML": "Calibration and Cryogenic Instrumentation",
+        "defLaTeX": "Calibration and Cryogenic Instrumentation",
+        "term": "CALCI",
+        "type": "word"
+    },
     "captain": {
         "defHTML": "Experimental program sited at <a href=\"#lanl\">Los Alamos National Laboratory</a> that is designed to make measurements of scientific importance to <a href=\"#lbl\">long-baseline</a> neutrino physics and physics topics that will be explored by large underground detectors.",
         "defLaTeX": "Experimental program sited at \\gls{lanl} that is designed to make measurements of scientific importance to \\gls{lbl} neutrino physics and physics topics that will be explored by large underground detectors",
@@ -1541,6 +1547,13 @@
         "defHTML": "Refers to the neutrino mass eigenstate ordering whereby the sign of the mass squared difference associated with the atmospheric neutrino problem is negative.",
         "defLaTeX": "Refers to the neutrino mass  eigenstate ordering whereby the sign of the mass squared difference  associated with the atmospheric neutrino problem is negative",
         "term": "inverted ordering",
+        "type": "abbrev"
+    },
+    "iov": {
+        "abbrev": "IOV",
+        "defHTML": "Interval of Validity",
+        "defLaTeX": "Interval of Validity",
+        "term": "Interval of Validity",
         "type": "abbrev"
     },
     "ipc": {
