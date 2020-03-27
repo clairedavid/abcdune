@@ -99,7 +99,7 @@
     },
     "apa": {
         "abbrev": "APA",
-        "defHTML": "A unit of the \\gsl{sp} detector module containing the elements sensitive to ionization in the \\lar. It contains two faces each of three planes of wires, and interfaces to the cold electronics and photon detection system.",
+        "defHTML": "A unit of the <a href=\"#sp\">single-phase</a> detector module containing the elements sensitive to ionization in the \\lar. It contains two faces each of three planes of wires, and interfaces to the cold electronics and photon detection system.",
         "defLaTeX": "A unit of the \\single  detector module containing the elements sensitive to ionization in the \\lar.  It contains two faces each of three planes of wires, and interfaces to the cold  electronics and photon detection system",
         "term": "anode plane assembly",
         "terms": "anode plane assemblies",
@@ -248,7 +248,7 @@
     },
     "bow": {
         "abbrev": "BOW",
-        "defHTML": "A working name for the front-end readout computing elements used in the nominal <a href=\"#daq\">data acquisition</a> design to interface the \\gsl{dp} crates to the <a href=\"#daq\">data acquisition</a> front-end computers.",
+        "defHTML": "A working name for the front-end readout computing elements used in the nominal <a href=\"#daq\">data acquisition</a> design to interface the <a href=\"#dp\">dual-phase</a> crates to the <a href=\"#daq\">data acquisition</a> front-end computers.",
         "defLaTeX": "A working name for the front-end readout computing elements used in the nominal \\gls{daq} design to interface the \\dual  crates to the \\gls{daq} front-end computers",
         "term": "Bump On Wire",
         "type": "abbrev"
@@ -484,7 +484,7 @@
     },
     "cpa": {
         "abbrev": "CPA",
-        "defHTML": "The component of the \\gsl{sp} detector module that provides the drift HV cathode.",
+        "defHTML": "The component of the <a href=\"#sp\">single-phase</a> detector module that provides the drift HV cathode.",
         "defLaTeX": "The component of the \\single detector module that provides the drift HV cathode",
         "term": "cathode plane assembly",
         "terms": "cathode plane assemblies",
@@ -524,7 +524,7 @@
     },
     "cro": {
         "abbrev": "CRO",
-        "defHTML": "The system for detecting ionization charge distributions in a \\gsl{dp} detector module.",
+        "defHTML": "The system for detecting ionization charge distributions in a <a href=\"#dp\">dual-phase</a> detector module.",
         "defLaTeX": "The system for detecting  ionization charge distributions in a \\dual detector module",
         "term": "charge readout",
         "type": "abbrev"
@@ -570,7 +570,7 @@
     },
     "ctsf": {
         "abbrev": "CTSF",
-        "defHTML": "A facility where the the \\gsl{dp} photon detectors will be coated, tested, and stored.",
+        "defHTML": "A facility where the the <a href=\"#dp\">dual-phase</a> photon detectors will be coated, tested, and stored.",
         "defLaTeX": "A facility where the the \\dual photon detectors will be coated, tested, and stored",
         "term": "coating, testing and storage facility",
         "type": "abbrev"
@@ -1669,7 +1669,7 @@
     },
     "las": {
         "abbrev": "LAS",
-        "defHTML": "In the \\gsl{dp} technology, a <a href=\"#lem\">large electron multiplier</a> and its corresponding anode are mounted together in a module called a LEM-anode sandwich.",
+        "defHTML": "In the <a href=\"#dp\">dual-phase</a> technology, a <a href=\"#lem\">large electron multiplier</a> and its corresponding anode are mounted together in a module called a LEM-anode sandwich.",
         "defLaTeX": "In the \\dual technology, a \\gls{lem} and its corresponding anode are mounted together in a module called a LEM-anode sandwich",
         "term": "LEM-anode Sandwich",
         "type": "abbrev"
@@ -1821,7 +1821,7 @@
     },
     "lro": {
         "abbrev": "LRO",
-        "defHTML": "The system for detecting scintillation photons in a \\gsl{dp} detector module.",
+        "defHTML": "The system for detecting scintillation photons in a <a href=\"#dp\">dual-phase</a> detector module.",
         "defLaTeX": "The system for detecting  scintillation photons in a \\dual  detector module",
         "term": "light readout",
         "type": "abbrev"
@@ -2836,7 +2836,7 @@
     },
     "sftchimney": {
         "abbrev": "SFT chimney",
-        "defHTML": "In the \\gsl{dp} technology, a volume above the cryostat penetration used for a signal feedthrough.",
+        "defHTML": "In the <a href=\"#dp\">dual-phase</a> technology, a volume above the cryostat penetration used for a signal feedthrough.",
         "defLaTeX": "In the \\dual technology, a volume above the cryostat penetration used for a signal feedthrough",
         "term": "signal feedthrough chimney",
         "type": "abbrev"
@@ -3327,7 +3327,7 @@
         "type": "abbrev"
     },
     "wire board": {
-        "defHTML": "At the head end of the APA in the \\gsl{sp} TPC, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires. They also provide the connection between the wires and the cold electronics.",
+        "defHTML": "At the head end of the APA in the <a href=\"#sp\">single-phase</a> TPC, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires. They also provide the connection between the wires and the cold electronics.",
         "defLaTeX": "At the head end of the APA in the \\single TPC, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires.  They also provide the connection between the wires and the cold electronics",
         "term": "wire board",
         "type": "word"

@@ -48,8 +48,8 @@ def latex_into_html(string, DUNEdict):
     # Temporary: replace \\fnal and \\surf by LaTeX glossary pointers:
     string = string.replace("\\fnal", "\\gls{fnal}")
     string = string.replace("\\surf", "\\gls{surf}")
-    string = string.replace("\\single", "\\gsl{sp}")
-    string = string.replace("\\dual", "\\gsl{dp}")
+    string = string.replace("\\single", "\\gls{sp}")
+    string = string.replace("\\dual", "\\gls{dp}")
     string = string.replace("\\glspl{", "\\gls{") # plural won't change HTML
 
     # List gls/glssp acronym references in LaTeX 
