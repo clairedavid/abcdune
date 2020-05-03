@@ -46,21 +46,26 @@ def remove_comment(line):
 def latex_into_html(string, DUNEdict):
  
     # Temporary: replace \\fnal and \\surf by LaTeX glossary pointers:
-    string = string.replace("\\fnal", "\\gls{fnal}")
-    string = string.replace("\\surf", "\\gls{surf}")
-    string = string.replace("\\single", "\\gls{sp}")
-    string = string.replace("\\dual", "\\gls{dp}")
-    string = string.replace("\\glspl{", "\\gls{") # plural won't change HTML
+#    string = string.replace("\\fnal", "\\gls{fnal}")
+#    string = string.replace("\\surf", "\\gls{surf}")
+#    string = string.replace("\\single", "\\gls{sp}")
+#    string = string.replace("\\dual", "\\gls{dp}")
+#    string = string.replace("\\glspl{", "\\gls{") # plural won't change HTML
 
     # List gls/glssp acronym references in LaTeX 
     re_gls = re.compile(r'\\gls\{(.*?)\}')
     glsTags = re_gls.findall(string)
 
     for glsTag in glsTags:
+        
         tagToReplace = "\\gls{" + glsTag + "}"
-        # Get term of referenced word:
-        term = DUNEdict[glsTag]["term"]
-        string = string.replace(tagToReplace, "<a href=\"#" + glsTag + "\">" + term + "</a>")
+        
+        # Get link text of the referenced word (key glsTag in the dictionnary)
+        # If referenced word is newduneword, display "term"
+        # If "abbrev", display "abbrev" field (to get "DUNE", "LAr" as link text) 
+
+        link_text = DUNEdict[glsTag]["term"] if DUNEdict[glsTag]["type"] is "word" else DUNEdict[glsTag]["abbrev"]
+        string    = string.replace(tagToReplace, "<a href=\"#" + glsTag + "\">" + link_text + "</a>")
     
     string = string.replace("  ", " ")
 
@@ -221,7 +226,7 @@ def main():
     content += '<br>\n</div>\n</body>\n</html>'
 
     #===== Export in HTML index =====
-    f_html = "./index.html"
+    f_html = "./docs/index.html"
     with open(f_html,'w') as f:
         f.write(content)
     print("HTML file created in:  " + f_html)

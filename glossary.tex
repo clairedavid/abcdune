@@ -88,7 +88,7 @@
 
 %far detector
 \newduneabbrev{fd}{FD}{far detector}{The \SI{70}{kt} total (\fdfiducialmass fiducial) mass \gls{lartpc} DUNE detector, composed of four \larmass total (\nominalmodsize fiducial) mass modules,  %or more generally the experimental 
-  to be installed at the far site at \surf in
+  to be installed at the far site at \gls{surf} in
   Lead, SD, USA}
 
 %single-phase
@@ -111,15 +111,15 @@
 %time projection chamber
 \newduneabbrev{tpc}{TPC}{time projection chamber}{A type of particle detector that uses an \efield together with a sensitive volume of gas or liquid, e.g., \gls{lar}, to perform a \threed reconstruction of a particle trajectory or interaction. The activity is recorded by digitizing the waveforms of current
   induced on the anode as the distribution of ionization charge passes by
-  or is collected on the electrode} % The portion of each DUNE \gls{detmodule} that records ionization electrons after they drift away from a cathode through the \lar, and also  through gaseous argon in a \dual module, is a TPC.  }
+  or is collected on the electrode} % The portion of each DUNE \gls{detmodule} that records ionization electrons after they drift away from a cathode through the \lar, and also  through gaseous argon in a \gls{dp} module, is a TPC.  }
 
 %liquid argon time-projection chamber
 \newduneabbrev{lartpc}{LArTPC}{liquid argon time-projection chamber}{A \gls{tpc} filled with liquid argon; %A class of detector technology that this technology forms 
 the basis for the \gls{dune} \gls{fd} modules} %.   It typically entails observation of ionization activity by  electrical signals and of scintillation by optical signals}
 
 %anode plane assembly
-\newduneabbrevs{apa}{APA}{anode plane assembly}{anode plane assemblies}{A unit of the \single
-  detector module containing the elements sensitive to ionization in the \lar. 
+\newduneabbrevs{apa}{APA}{anode plane assembly}{anode plane assemblies}{A unit of the \gls{sp}
+  detector module containing the elements sensitive to ionization in the \gls{lar}. 
   It contains two faces each of three planes of wires, and interfaces to the cold
   electronics and photon detection system} 
 
@@ -129,11 +129,11 @@ the basis for the \gls{dune} \gls{fd} modules} %.   It typically entails observa
 
 %charge readout
 \newduneabbrev{cro}{CRO}{charge readout}{The system for detecting
-  ionization charge distributions in a \dual detector module}
+  ionization charge distributions in a \gls{dp} detector module}
 
 %light readout
 \newduneabbrev{lro}{LRO}{light readout}{The system for detecting
-  scintillation photons in a \dual  detector module}
+  scintillation photons in a \gls{dp}  detector module}
 
 %safe high voltage
 \newduneabbrev{shv}{SHV}{safe high voltage}{Type of bayonet mount
@@ -318,7 +318,7 @@ is made up of \gls{apa}  units (and other elements)}
   $\theta_{23}$}
 
 %sub-detector ??? %%%%%%%%%%%%%%%%%%%     CHeck if used (Anne)  %%%%%% ???????
-%\newduneword{submodule}{subdetector}{A detector unit of granularity less  than one \gls{detmodule} such as the TPC of either a \single or \dual   module}
+%\newduneword{submodule}{subdetector}{A detector unit of granularity less  than one \gls{detmodule} such as the TPC of either a \gls{sp} or \gls{dp}   module}
 
 %trigger candidate
 \newduneword{trigcandidate}{trigger candidate}{Summary information derived
@@ -365,7 +365,7 @@ is made up of \gls{apa}  units (and other elements)}
 \newduneabbrev{rce}{RCE}{reconfigurable computing element}{Data processor located outside of the cryostat on a \gls{cob} that contains \gls{fpga}, RAM and \gls{ssd} resources, responsible for buffering data, producing trigger primitives, responding to triggered requests for data and synching \gls{snb} dumps}
 
 %bump on wire
-\newduneabbrev{bow}{BOW}{Bump On Wire}{A working name for the front-end readout computing elements used in the nominal \gls{daq} design to interface the \dual  crates to the \gls{daq} front-end computers}
+\newduneabbrev{bow}{BOW}{Bump On Wire}{A working name for the front-end readout computing elements used in the nominal \gls{daq} design to interface the \gls{dp}  crates to the \gls{daq} front-end computers}
 
 %advanced telecommunication computing architecture
 \newduneabbrev{atca}{ATCA}{Advanced Telecommunications Computing
@@ -660,8 +660,7 @@ $\gls{snr}=1$}
   transformations are applied. 
   For CP symmetry to hold,  a particle turns into its
  corresponding antiparticle under a charge transformation, and a parity
-transformation inverts its space coordinates, i.e., 
-produces the mirror image}
+transformation inverts its space coordinates, i.e. produces the mirror image}
 
 %us department of energy
 \newduneword{doe}{DOE}{U.S. Department of Energy}
@@ -685,7 +684,7 @@ produces the mirror image}
 
 %far site conventional facilities
 \newduneabbrev{fscf}{FSCF}{far site conventional facilities}{The
-  \gls{cf} at the DUNE far detector site, \surf}
+  \gls{cf} at the DUNE far detector site, \gls{surf}}
   
 %near site conventional facilities
 \newduneabbrev{nscf}{NSCF}{near site conventional facilities}{The
@@ -772,7 +771,7 @@ milestone on the path to a full \gls{tdr}} % changed from ``technical proposal''
 
 
 
-\newduneabbrevs{cpa}{CPA}{cathode plane assembly}{cathode plane assemblies}{The component of the \single detector module that provides the drift HV cathode}
+\newduneabbrevs{cpa}{CPA}{cathode plane assembly}{cathode plane assemblies}{The component of the \gls{sp} detector module that provides the drift HV cathode}
 
 \newduneabbrev{fc}{FC}{field cage}{The component of a \gls{lartpc} that contains and shapes the applied \efield}
 
@@ -805,8 +804,8 @@ milestone on the path to a full \gls{tdr}} % changed from ``technical proposal''
 % can also use in the text: \gls{sp} \gls{detmodule} 
 \newduneword{spmod}{SP module}{single-phase DUNE \gls{fd} module}
 \newduneword{dpmod}{DP module}{dual-phase DUNE \gls{fd} module}
-%\newduneword{dsp}{DUNE-SP}{The \single DUNE detector} % No they are det modules!
-%\newduneword{ddp}{DUNE-DP}{The \dual DUNE detector}% No they are det modules!
+%\newduneword{dsp}{DUNE-SP}{The \gls{sp} DUNE detector} % No they are det modules!
+%\newduneword{ddp}{DUNE-DP}{The \gls{dp} DUNE detector}% No they are det modules!
 
 \newduneabbrev{tcoord}{TC}{technical coordinator}{A member of the \gls{dune} management team responsible for organizing the technical aspects of the project effort; is head of \gls{tc}}
 
@@ -882,7 +881,7 @@ and safety}
 \newduneabbrev{sdsd}{SDSD}{Fermilab South Dakota Services Division}{A Fermilab division responsible providing host laboratory functions at SURF in South Dakota}
 
 \newduneabbrev{firus}{FIRUS}{Facility Information Reporting Utility System}
- {The safety system at \surf}
+ {The safety system at \gls{surf}}
 
 \newduneabbrev{bsi}{BSI}{building and site infrastructure}
  {The work package for outfitting of the \gls{lbnf} underground infrastructure}
@@ -904,10 +903,10 @@ and safety}
   that are otherwise inconsistent with the amount of mass associated
   with the observed amount of photon production}
   
-  \newduneabbrev{bdm}{BDM}{boosted dark matter}{A new model that describes a relativistic dark matter particle boosted by the annihilation of heavier dark matter participles in the galactic center or the sun}
+  \newduneabbrev{bdm}{BDM}{boosted dark matter}{A new model that describes a relativistic dark matter particle boosted by the annihilation of heavier dark matter particles in the galactic center or the sun}
 
 \newduneabbrev{cern}{CERN}{European Organization for Nuclear
-Research}{The leading particle physics laboratory in Europe and home to the ProtoDUNEs. (In French, the Organisation Europ\'{e}enne pour la Recherche Nucl\'{e}aire, derived from Conseil Europ\'{e}en pour la Recherche Nucl\'{e}aire}
+Research}{The leading particle physics laboratory in Europe and home to the ProtoDUNEs. (In French, the Organisation Europ\'{e}enne pour la Recherche Nucl\'{e}aire, derived from Conseil Europ\'{e}en pour la Recherche Nucl\'{e}aire)}
 
 
 \newduneabbrev{dsnb}{DSNB}{diffuse supernova neutrino background}{The
@@ -1059,20 +1058,19 @@ Neutrino Facility (LBNF)''}
 \newduneword{stt}{STT}{straw tube tracker}
 
 
-\newduneword{wire board}{wire board}{At the head end of the APA in the \single TPC, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires.  They also provide the connection between the wires and the cold electronics} %?? long for a word. ??
+\newduneword{wire board}{wire board}{At the head end of the APA in the \gls{sp} TPC, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires.  They also provide the connection between the wires and the cold electronics} %?? long for a word. ??
 
 \newduneabbrev{wls}{WLS}{wavelength-shifting}{A material or process by
   which incident photons are absorbed by a material and photons are
   emitted at a different, typically longer, wavelength}
   
-\newduneabbrev{tpb}{TPB}{tetra-phenyl butadiene}{A %type of 
-\gls{wls} material}
+\newduneabbrev{tpb}{TPB}{tetra-phenyl butadiene}{A \gls{wls} material}
 
 \newduneabbrev{ptp}{PTP}{p-terphenyl}{A %type of 
 \gls{wls} material}
 
 \newduneabbrev{sft}{SFT}{signal feedthrough}{A cryostat penetration allowing for the passage of cables or other extended parts}
-\newduneabbrev{sftchimney}{SFT chimney}{signal feedthrough chimney}{In the \dual technology, a volume above the cryostat penetration used for a signal feedthrough}
+\newduneabbrev{sftchimney}{SFT chimney}{signal feedthrough chimney}{In the \gls{dp} technology, a volume above the cryostat penetration used for a signal feedthrough}
 
 
 \newduneabbrev{catiroc}{CATIROC}{charge and time integrated readout chip}{A complete read-out chip manufactured in AustriaMicroSystem designed to read arrays of 16 photomultipliers}
@@ -1108,7 +1106,7 @@ Neutrino Facility (LBNF)''}
 
 \newduneabbrev{uit}{UIT}{underground installation team}{An organizational unit responsible for installation in the underground area at the \gls{surf} site}
 
-\newduneabbrev{cmgc}{CMGC}{construction manager/general contractor}{The organizational unit responsible for management of the construction of conventional facilities at the underground area at the \surf site}
+\newduneabbrev{cmgc}{CMGC}{construction manager/general contractor}{The organizational unit responsible for management of the construction of conventional facilities at the underground area at the \gls{surf} site}
 
 %\newduneabbrev{cdrev}{CDR}{conceptual design review}{A project management device by which a conceptual design is reviewed} 
 \newduneword{cdrev}{conceptual design review}{A project management device by which a conceptual design is reviewed} 
@@ -1173,7 +1171,7 @@ Neutrino Facility (LBNF)''}
 \newduneword{led}{LED}{Light-emitting diode}
 \newduneabbrev{rtd}{RTD}{resistance temperature detector}{A temperature sensor consisting of a material with an accurate and reproducible resistance/temperature relationship}
 \newduneword{swc}{SWC}{Software \& Computing}
-\newduneabbrev{las}{LAS}{LEM-anode Sandwich}{In the \dual technology, a \gls{lem} and its corresponding anode are mounted together in a module called a LEM-anode sandwich}
+\newduneabbrev{las}{LAS}{LEM-anode Sandwich}{In the \gls{dp} technology, a \gls{lem} and its corresponding anode are mounted together in a module called a LEM-anode sandwich}
 
 \newduneword{roi}{ROI}{region of interest}
 \newduneabbrev{hpc}{HPC}{high-performance computing}{high-performance computing facilities; generally computing facilities emphasizing parallel computing with aggregate power of more than a teraflop}
@@ -1287,11 +1285,7 @@ neutrinos and also solar 8--boron neutrinos}
 elastically scatters off of another particle}
 
 
-\newduneabbrev{cno}{CNO}{carbon nitrogen oxygen}{The CNO cycle (for carbon-nitrogen-oxygen) is one of the two known sets of fusion reactions by which stars convert
-hydrogen to helium, the other being the proton-proton chain reaction
-(pp-chain reaction). In the CNO cycle, four protons fuse, using
-carbon, nitrogen, and oxygen isotopes as catalysts, to produce one
-alpha particle, two positrons and two electron neutrinos}
+\newduneabbrev{cno}{CNO}{carbon nitrogen oxygen}{The CNO cycle (for carbon-nitrogen-oxygen) is one of the two known sets of fusion reactions by which stars convert hydrogen to helium, the other being the proton-proton chain reaction (pp-chain reaction). In the CNO cycle, four protons fuse, using carbon, nitrogen, and oxygen isotopes as catalysts, to produce one alpha particle, two positrons and two electron neutrinos}
 
 \newduneabbrev{sdwf}{SDWF}{South Dakota Warehouse Facility}{Warehousing operations in South Dakota responsible for receiving LBNF and DUNE goods and coordinating shipments to the Ross shaft at \gls{surf}}
 
@@ -1299,7 +1293,7 @@ alpha particle, two positrons and two electron neutrinos}
 
 \newduneabbrev{dcdb}{DCDB}{DUNE construction database}{Database used by DUNE to track the history and testing of all parts of each \gls{detmodule}}
 
-\newduneabbrev{aup}{AUP}{acceptance for use and possession}{Required for beneficial occupancy of the underground areas at SURF for LBNF and DUNE}
+\newduneabbrev{aup}{AUP}{acceptance for use and possession}{Required for beneficial occupancy of the underground areas at \gls{surf} for \gls{lbnf} and \gls{dune}}
 
 \newduneabbrev{bms}{BMS}{building management system}{Part of the safety system at \gls{surf} that includes the fire and life safety system}
 \newduneabbrev{fls}{FLS}{fire and life safety system}{Part of the safety system at \gls{surf}}
@@ -1356,7 +1350,7 @@ it describes the work to be accomplished during the trip} % ask Jim Stewart to c
 
 \newduneabbrev{wg}{WG}{working group}{A group of persons working together to achieve specified goals}
 
-\newduneabbrev{ctsf}{CTSF}{coating, testing and storage facility}{A facility where the the \dual photon detectors will be coated, tested, and stored}
+\newduneabbrev{ctsf}{CTSF}{coating, testing and storage facility}{A facility where the the \gls{dp} photon detectors will be coated, tested, and stored}
 
 % from DP-PDS --end
 
@@ -1443,7 +1437,7 @@ that is selected for physics analysis through cuts on reconstructed event positi
 \newduneword{core}{CORE}{CORE contributions are in either monetary units or labor hours. They can be technical components for the facility or experiment and the effort of the staff needed to produce, install, and test them;  major facilities for the experiment; or other products and services relevant for the completion of the facility or experiment} % 15 May - gina needs to `bless' this
 
 
-\newduneabbrev{ahj}{AHJ}{Authority Having Jurisdiction}{An organization, office, or individual responsible for enforcing the requirements of a code or standard, or for approving equipment, materials, an installation, or a procedure (OSHA)}
+\newduneabbrev{ahj}{AHJ}{Authority Having Jurisdiction}{An organization, office, or individual responsible for enforcing the requirements of a code or standard, or for approving equipment, materials, an installation, or a procedure (\gls{osha})}
 \newduneword{cte}{CTE}{coefficient of thermal expansion}
 
 \newduneabbrev{opc}{OPC}{open platform communications}{Open platform communications is a series of standards and specifications for industrial telecommunication} 
@@ -1505,9 +1499,7 @@ H ($>\,$\SI{20}{\%} and $>\,$2 months, respectively)}
 \newduneword{lhcb}{LHCb}{LHC experiment dedicated to forward physics}
 \newduneword{belleii}{Belle II}{B-factory experiment now running at KEK}
 
-
-
- \newduneabbrev{ldm}{LDM}{light-mass dark matter}{Refers to dark matter particles with mass values much lower than the electroweak scale, specifically below the 1~GeV level}
+\newduneabbrev{ldm}{LDM}{light-mass dark matter}{Refers to dark matter particles with mass values much lower than the electroweak scale, specifically below the 1~GeV level}
  
 \newduneabbrev{bnv}{BNV}{baryon-number violating}{Describing an interaction where \gls{baryonnumber} is not conserved}
 
