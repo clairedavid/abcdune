@@ -43,8 +43,38 @@ def remove_comment(line):
         line_with_no_comment = line[:index_percentage]
         return(line_with_no_comment.rstrip())
 
-def latex_into_html(string, DUNEdict):
- 
+def gls_to_html_link(defString, gls_tag_type, DUNEdict):
+
+    # defString contains gls and/or glspl tags to replace
+    # by HTML <a></a> tags
+
+    isPlural = True if gls_tag_type is "glspl" else False
+    
+    # not converting display only for now
+    re_gls  = re.compile(r'\\%s\{(.*?)\}', gls_tag)
+    glsTags = re_gls.findall(defString)
+
+    for glsTag in glsTags:
+        
+        tagToReplace = "\\" + gls_tag_type + "{" + glsTag + "}"
+        
+        # The link text in HTML is either:
+        # "term" entry in dictionary if type 'word'
+        # "abbrev" entry (acronym) if type 'abbrev'
+
+        link_text = DUNEdict[glsTag]["term"] if DUNEdict[glsTag]["type"] is "word" else DUNEdict[glsTag]["abbrev"]
+        if isPlural:
+            link_text = link_text + "s"
+
+        defString  = defString.replace(tagToReplace, "<a href=\"#" + glsTag + "\">" + link_text + "</a>")
+    
+    defString = defString.replace("  ", " ")
+
+    return string + "." # adding period at the end of the HTML definition 
+
+
+def latex_into_html(defLaTeX, DUNEdict):
+
     # Temporary: replace \\fnal and \\surf by LaTeX glossary pointers:
 #    string = string.replace("\\fnal", "\\gls{fnal}")
 #    string = string.replace("\\surf", "\\gls{surf}")
@@ -52,9 +82,9 @@ def latex_into_html(string, DUNEdict):
 #    string = string.replace("\\dual", "\\gls{dp}")
 #    string = string.replace("\\glspl{", "\\gls{") # plural won't change HTML
 
-    # List gls/glssp acronym references in LaTeX 
+    # List gls/ acronym references in LaTeX 
     re_gls = re.compile(r'\\gls\{(.*?)\}')
-    glsTags = re_gls.findall(string)
+    glsTags = re_gls.findall(defLaTeX)
 
     for glsTag in glsTags:
         
@@ -65,11 +95,11 @@ def latex_into_html(string, DUNEdict):
         # If "abbrev", display "abbrev" field (to get "DUNE", "LAr" as link text) 
 
         link_text = DUNEdict[glsTag]["term"] if DUNEdict[glsTag]["type"] is "word" else DUNEdict[glsTag]["abbrev"]
-        string    = string.replace(tagToReplace, "<a href=\"#" + glsTag + "\">" + link_text + "</a>")
+        defLaTeX  = defLaTeX.replace(tagToReplace, "<a href=\"#" + glsTag + "\">" + link_text + "</a>")
     
-    string = string.replace("  ", " ")
+    defLaTeX = defLaTeX.replace("  ", " ")
 
-    return string + "." 
+    return string + "." # adding period at the end of the HTML definition 
 
 def main():
 

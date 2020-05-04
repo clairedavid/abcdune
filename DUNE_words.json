@@ -379,8 +379,8 @@
     },
     "citf": {
         "abbrev": "CITF",
-        "defHTML": "A facility at \\fnal with small ($<\\,\\SI{1}{ton}$) to intermediate ($\\sim\\,\\SI{1}{ton}$) volumes of instrumented, purified TPC-grade \\lar, used for testing devices intended for use in <a href=\"#dune\">DUNE</a>.",
-        "defLaTeX": "A facility at \\fnal with small ($<\\,\\SI{1}{ton}$) to intermediate ($\\sim\\,\\SI{1}{ton}$) volumes of instrumented, purified TPC-grade \\lar, used for testing devices intended for use in \\gls{dune}",
+        "defHTML": "A facility at \\fnal with small ($<\\,\\SI{1}{ton}$) to intermediate ($\\sim\\,\\SI{1}{ton}$) volumes of instrumented, purified TPC-grade <a href=\"#lar\">LAr</a>, used for testing devices intended for use in <a href=\"#dune\">DUNE</a>.",
+        "defLaTeX": "A facility at \\fnal with small ($<\\,\\SI{1}{ton}$) to intermediate ($\\sim\\,\\SI{1}{ton}$) volumes of instrumented, purified TPC-grade \\gls{lar}, used for testing devices intended for use in \\gls{dune}",
         "term": "cryogenic instrumentation test facility",
         "type": "abbrev"
     },
@@ -1089,8 +1089,8 @@
     },
     "fd": {
         "abbrev": "FD",
-        "defHTML": "The \\SI{70}{kt} total (\\fdfiducialmass fiducial) mass <a href=\"#lartpc\">LArTPC</a> DUNE detector, composed of four \\larmass total (\\nominalmodsize fiducial) mass modules, to be installed at the far site at <a href=\"#surf\">SURF</a> in Lead, SD, USA.",
-        "defLaTeX": "The \\SI{70}{kt} total (\\fdfiducialmass fiducial) mass \\gls{lartpc} DUNE detector, composed of four \\larmass total (\\nominalmodsize fiducial) mass modules,  to be installed at the far site at \\gls{surf} in  Lead, SD, USA",
+        "defHTML": "The \\SI{70}{kt} total (\\fdfiducialmass fiducial) mass <a href=\"#lartpc\">LArTPC</a> DUNE detector, composed of four <a href=\"#lar\">LAr</a>mass total (\\nominalmodsize fiducial) mass modules, to be installed at the far site at <a href=\"#surf\">SURF</a> in Lead, SD, USA.",
+        "defLaTeX": "The \\SI{70}{kt} total (\\fdfiducialmass fiducial) mass \\gls{lartpc} DUNE detector, composed of four \\gls{lar}mass total (\\nominalmodsize fiducial) mass modules,  to be installed at the far site at \\gls{surf} in  Lead, SD, USA",
         "term": "far detector",
         "type": "abbrev"
     },
@@ -1655,8 +1655,8 @@
     },
     "larsoft": {
         "abbrev": "LArSoft",
-        "defHTML": "A shared base of physics software across \\lartpc experiments.",
-        "defLaTeX": "A shared base of physics software across \\lartpc experiments",
+        "defHTML": "A shared base of physics software across <a href=\"#lar\">LAr</a>tpc experiments.",
+        "defLaTeX": "A shared base of physics software across \\gls{lar}tpc experiments",
         "term": "Liquid Argon Software",
         "type": "abbrev"
     },
@@ -1921,8 +1921,8 @@
         "type": "abbrev"
     },
     "microboone": {
-        "defHTML": "The \\lartpc-based \\microboone neutrino oscillation experiment at <a href=\"#fnal\">Fermilab</a>.",
-        "defLaTeX": "The \\lartpc-based \\microboone neutrino oscillation experiment at  \\gls{fnal}",
+        "defHTML": "The <a href=\"#lar\">LAr</a>tpc-based \\microboone neutrino oscillation experiment at <a href=\"#fnal\">Fermilab</a>.",
+        "defLaTeX": "The \\gls{lar}tpc-based \\microboone neutrino oscillation experiment at  \\gls{fnal}",
         "term": "MicroBooNE",
         "type": "word"
     },
@@ -2332,8 +2332,8 @@
     },
     "pds": {
         "abbrev": "PD system",
-        "defHTML": "The detector subsystem sensitive to light produced in the \\lar .",
-        "defLaTeX": "The detector  subsystem sensitive to light produced in the \\lar ",
+        "defHTML": "The detector subsystem sensitive to light produced in the <a href=\"#lar\">LAr</a> .",
+        "defLaTeX": "The detector  subsystem sensitive to light produced in the \\gls{lar} ",
         "term": "photon detection system",
         "type": "abbrev"
     },
@@ -3139,8 +3139,8 @@
     },
     "tpb": {
         "abbrev": "TPB",
-        "defHTML": "A<a href=\"#wls\">WLS</a> material.",
-        "defLaTeX": "A\\gls{wls} material",
+        "defHTML": "A <a href=\"#wls\">WLS</a> material.",
+        "defLaTeX": "A \\gls{wls} material",
         "term": "tetra-phenyl butadiene",
         "type": "abbrev"
     },
@@ -3293,8 +3293,8 @@
     },
     "wct": {
         "abbrev": "WCT",
-        "defHTML": "A software toolkit with data flow processing components for \\lartpc noise and signal simulation, noise filtering, signal processing, and tomographic \\threed ionization activity imaging.",
-        "defLaTeX": "A software toolkit with data flow processing components for \\lartpc noise and signal simulation, noise filtering, signal processing, and tomographic \\threed ionization activity imaging",
+        "defHTML": "A software toolkit with data flow processing components for <a href=\"#lar\">LAr</a>tpc noise and signal simulation, noise filtering, signal processing, and tomographic \\threed ionization activity imaging.",
+        "defLaTeX": "A software toolkit with data flow processing components for \\gls{lar}tpc noise and signal simulation, noise filtering, signal processing, and tomographic \\threed ionization activity imaging",
         "term": "Wire-Cell Toolkit",
         "type": "abbrev"
     },
@@ -3333,8 +3333,8 @@
         "type": "word"
     },
     "wirecell": {
-        "defHTML": "A tomographic automated \\threed neutrino event reconstruction method for \\lartpc{}s.",
-        "defLaTeX": "A tomographic automated \\threed neutrino event reconstruction method for \\lartpc{}s",
+        "defHTML": "A tomographic automated \\threed neutrino event reconstruction method for <a href=\"#lar\">LAr</a>tpc{}s.",
+        "defLaTeX": "A tomographic automated \\threed neutrino event reconstruction method for \\gls{lar}tpc{}s",
         "term": "Wire-Cell",
         "type": "word"
     },
