@@ -45,13 +45,12 @@ def remove_comment(line):
 
 def gls_to_html_link(defString, gls_tag_type, DUNEdict):
 
-    # defString contains gls and/or glspl tags to replace
+    # defString may contain gls{} or glspl{} tags to replace
     # by HTML <a></a> tags
 
     isPlural = True if gls_tag_type is "glspl" else False
-    
-    # not converting display only for now
-    re_gls  = re.compile(r'\\%s\{(.*?)\}', gls_tag)
+
+    re_gls  = re.compile(r'\\' + gls_tag_type + '\{(.*?)\}')
     glsTags = re_gls.findall(defString)
 
     for glsTag in glsTags:
@@ -68,38 +67,17 @@ def gls_to_html_link(defString, gls_tag_type, DUNEdict):
 
         defString  = defString.replace(tagToReplace, "<a href=\"#" + glsTag + "\">" + link_text + "</a>")
     
-    defString = defString.replace("  ", " ")
-
-    return string + "." # adding period at the end of the HTML definition 
+    return defString 
 
 
 def latex_into_html(defLaTeX, DUNEdict):
 
-    # Temporary: replace \\fnal and \\surf by LaTeX glossary pointers:
-#    string = string.replace("\\fnal", "\\gls{fnal}")
-#    string = string.replace("\\surf", "\\gls{surf}")
-#    string = string.replace("\\single", "\\gls{sp}")
-#    string = string.replace("\\dual", "\\gls{dp}")
-#    string = string.replace("\\glspl{", "\\gls{") # plural won't change HTML
-
-    # List gls/ acronym references in LaTeX 
-    re_gls = re.compile(r'\\gls\{(.*?)\}')
-    glsTags = re_gls.findall(defLaTeX)
-
-    for glsTag in glsTags:
-        
-        tagToReplace = "\\gls{" + glsTag + "}"
-        
-        # Get link text of the referenced word (key glsTag in the dictionnary)
-        # If referenced word is newduneword, display "term"
-        # If "abbrev", display "abbrev" field (to get "DUNE", "LAr" as link text) 
-
-        link_text = DUNEdict[glsTag]["term"] if DUNEdict[glsTag]["type"] is "word" else DUNEdict[glsTag]["abbrev"]
-        defLaTeX  = defLaTeX.replace(tagToReplace, "<a href=\"#" + glsTag + "\">" + link_text + "</a>")
+    # Manually replace \gls{} and \glspl{} tags with HTML <a></a> link tags
+    stringHTML = gls_to_html_link(defLaTeX, "gls", DUNEdict)
+    stringHTML = gls_to_html_link(stringHTML, "glspl", DUNEdict)
+    stringHTML = stringHTML.replace("  ", " ")
     
-    defLaTeX = defLaTeX.replace("  ", " ")
-
-    return string + "." # adding period at the end of the HTML definition 
+    return stringHTML.rstrip(' ') + "." # adding period at the end of the HTML definition 
 
 def main():
 
@@ -243,11 +221,15 @@ def main():
 
             if key.startswith(letter.lower()) or (letter is "&num;" and key[0].isdigit()):
 
+                # Format the term if referenced word (gls)
+                termHTML = gls_to_html_link(info["term"], "gls", DUNEdict)
+
                 if info["type"] is not "word": # cases abbrev and abbrevs
+
                     content += '  <dt id = "' + key + '">' + info["abbrev"] + '</dt>\n'
-                    content += '  <dd>' + info["term"] + '<br>'
+                    content += '  <dd>' + termHTML + '<br>'
                 else:
-                    content += '  <dt id = "' + key + '">' + info["term"] + '</dt>\n'
+                    content += '  <dt id = "' + key + '">' + termHTML + '</dt>\n'
                     content += '  <dd>'
                 content += info["defHTML"] + '</dd>\n'
         # end of letter block

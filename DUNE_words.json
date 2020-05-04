@@ -6,8 +6,8 @@
         "type": "word"
     },
     "35t": {
-        "defHTML": "A prototype cryostat and <a href=\"#sp\">SP</a> detector built at \\fnal before the <a href=\"#protodune\">ProtoDUNE</a> detectors.",
-        "defLaTeX": "A prototype cryostat and \\gls{sp} detector built at \\fnal before the \\gls{protodune} detectors",
+        "defHTML": "A prototype cryostat and <a href=\"#sp\">SP</a> detector built at <a href=\"#fnal\">Fermilab</a> before the <a href=\"#protodune\">ProtoDUNE</a> detectors.",
+        "defLaTeX": "A prototype cryostat and \\gls{sp} detector built at \\gls{fnal} before the \\gls{protodune} detectors",
         "term": "35 ton prototype",
         "type": "word"
     },
@@ -379,8 +379,8 @@
     },
     "citf": {
         "abbrev": "CITF",
-        "defHTML": "A facility at \\fnal with small ($<\\,\\SI{1}{ton}$) to intermediate ($\\sim\\,\\SI{1}{ton}$) volumes of instrumented, purified TPC-grade <a href=\"#lar\">LAr</a>, used for testing devices intended for use in <a href=\"#dune\">DUNE</a>.",
-        "defLaTeX": "A facility at \\fnal with small ($<\\,\\SI{1}{ton}$) to intermediate ($\\sim\\,\\SI{1}{ton}$) volumes of instrumented, purified TPC-grade \\gls{lar}, used for testing devices intended for use in \\gls{dune}",
+        "defHTML": "A facility at <a href=\"#fnal\">Fermilab</a> with small ($<\\,\\SI{1}{ton}$) to intermediate ($\\sim\\,\\SI{1}{ton}$) volumes of instrumented, purified TPC-grade <a href=\"#lar\">LAr</a>, used for testing devices intended for use in <a href=\"#dune\">DUNE</a>.",
+        "defLaTeX": "A facility at \\gls{fnal} with small ($<\\,\\SI{1}{ton}$) to intermediate ($\\sim\\,\\SI{1}{ton}$) volumes of instrumented, purified TPC-grade \\gls{lar}, used for testing devices intended for use in \\gls{dune}",
         "term": "cryogenic instrumentation test facility",
         "type": "abbrev"
     },
@@ -491,7 +491,7 @@
         "type": "abbrevs"
     },
     "cpafc": {
-        "defHTML": "A pair of <a href=\"#cpa\">CPA</a> panels and the top and bottom <a href=\"#fc\">FC</a> portions that attach to the pair; an intermediate assembly for installation into the <a href=\"#spmod\">SP module</a> .",
+        "defHTML": "A pair of <a href=\"#cpa\">CPA</a> panels and the top and bottom <a href=\"#fc\">FC</a> portions that attach to the pair; an intermediate assembly for installation into the <a href=\"#spmod\">SP module</a>.",
         "defLaTeX": "A pair of \\gls{cpa} panels and the top and bottom \\gls{fc} portions that attach to the pair; an intermediate assembly for installation into the \\gls{spmod} ",
         "term": "CPA/FC",
         "type": "word"
@@ -649,7 +649,7 @@
         "type": "abbrev"
     },
     "daqds": {
-        "defHTML": "The portion of the <a href=\"#daqfrag\">DAQ front-end fragment</a> that accepts \\glspl{trigcommand} and returns the corresponding <a href=\"#datafrag\">data fragment</a>. Not to be confused with <a href=\"#daqdsn\">data selection</a>.",
+        "defHTML": "The portion of the <a href=\"#daqfrag\">DAQ front-end fragment</a> that accepts <a href=\"#trigcommand\">trigger commands</a> and returns the corresponding <a href=\"#datafrag\">data fragment</a>. Not to be confused with <a href=\"#daqdsn\">data selection</a>.",
         "defLaTeX": "The portion of the \\gls{daqfrag}  that accepts \\glspl{trigcommand} and returns the corresponding  \\gls{datafrag}.  Not to be confused with \\gls{daqdsn}",
         "term": "data selector",
         "type": "word"
@@ -669,7 +669,7 @@
     },
     "daqeti": {
         "abbrev": "ETI",
-        "defHTML": "Interface between \\glspl{mtl} and external source and sinks of relevant trigger information.",
+        "defHTML": "Interface between <a href=\"#mtl\">MTLs</a> and external source and sinks of relevant trigger information.",
         "defLaTeX": "Interface between \\glspl{mtl} and external source and sinks of relevant trigger information",
         "term": "external trigger interface",
         "type": "abbrev"
@@ -682,20 +682,20 @@
         "type": "abbrev"
     },
     "daqfrag": {
-        "defHTML": "The portion of one <a href=\"#daqpart\">DAQ partition</a> relating to a single <a href=\"#fec\">DAQ FEC</a> and corresponding to an integral number of \\glspl{detunit}. See also <a href=\"#datafrag\">data fragment</a>.",
+        "defHTML": "The portion of one <a href=\"#daqpart\">DAQ partition</a> relating to a single <a href=\"#fec\">DAQ FEC</a> and corresponding to an integral number of <a href=\"#detunit\">detector units</a>. See also <a href=\"#datafrag\">data fragment</a>.",
         "defLaTeX": "The portion of one  \\gls{daqpart} relating to a single \\gls{fec} and corresponding to an  integral number of \\glspl{detunit}.  See also \\gls{datafrag}",
         "term": "DAQ front-end fragment",
         "type": "word"
     },
     "daqoob": {
         "abbrev": "OOB dispatcher",
-        "defHTML": "This component is responsible for dispatching a <a href=\"#snb\">SNB</a> dump command to all \\glspl{daqfer} in the <a href=\"#detmodule\">detector module</a>.",
+        "defHTML": "This component is responsible for dispatching a <a href=\"#snb\">SNB</a> dump command to all <a href=\"#daqfer\">FERs</a> in the <a href=\"#detmodule\">detector module</a>.",
         "defLaTeX": "This component is responsible for dispatching a \\gls{snb} dump  command to all \\glspl{daqfer} in the \\gls{detmodule}",
         "term": "out-of-band trigger command  dispatcher",
         "type": "abbrev"
     },
     "daqpart": {
-        "defHTML": "A cohesive and coherent collection of <a href=\"#daq\">DAQ</a> hardware and software working together to trigger and read out some portion of one detector module; it consists of an integral number of \\glspl{daqfrag}. Multiple <a href=\"#daq\">DAQ</a> partitions may operate simultaneously, but each instance operates independently.",
+        "defHTML": "A cohesive and coherent collection of <a href=\"#daq\">DAQ</a> hardware and software working together to trigger and read out some portion of one detector module; it consists of an integral number of <a href=\"#daqfrag\">DAQ front-end fragments</a>. Multiple <a href=\"#daq\">DAQ</a> partitions may operate simultaneously, but each instance operates independently.",
         "defLaTeX": "A cohesive and coherent collection of \\gls{daq} hardware and software working together to trigger and read out some portion of one detector module; it consists of an integral number of \\glspl{daqfrag}. Multiple \\gls{daq} partitions may operate simultaneously, but each instance operates independently",
         "term": "DAQ partition",
         "type": "word"
@@ -715,7 +715,7 @@
         "type": "abbrev"
     },
     "daqrun": {
-        "defHTML": "A period of time over which relevant data taking conditions and <a href=\"#daq\">DAQ</a> configuration are asserted to be unchanged. Multiple <a href=\"#daq\">DAQ</a> runs may occur simultaneously when multiple \\glspl{daqpart} are active. This term should not be confused with DUNE experiment or beam ``runs'' that typically span many <a href=\"#daq\">DAQ</a> runs.",
+        "defHTML": "A period of time over which relevant data taking conditions and <a href=\"#daq\">DAQ</a> configuration are asserted to be unchanged. Multiple <a href=\"#daq\">DAQ</a> runs may occur simultaneously when multiple <a href=\"#daqpart\">DAQ partitions</a> are active. This term should not be confused with DUNE experiment or beam ``runs'' that typically span many <a href=\"#daq\">DAQ</a> runs.",
         "defLaTeX": "A period of time over which relevant data taking conditions and \\gls{daq} configuration are asserted to be unchanged.  Multiple \\gls{daq} runs may occur simultaneously when multiple \\glspl{daqpart} are active.  This term should not be confused with DUNE experiment or beam ``runs'' that typically span many \\gls{daq} runs",
         "term": "DAQ run",
         "type": "word"
@@ -798,8 +798,8 @@
         "type": "word"
     },
     "dirac": {
-        "defHTML": "Computing workflow management designed forLHCb and now used by many HEP experiments.",
-        "defLaTeX": "Computing workflow management designed forLHCb and now used by many HEP experiments",
+        "defHTML": "Computing workflow management designed for LHCb and now used by many HEP experiments.",
+        "defLaTeX": "Computing workflow management designed for LHCb and now used by many HEP experiments",
         "term": "DIRAC",
         "type": "word"
     },
@@ -818,7 +818,7 @@
     },
     "dm": {
         "abbrev": "DM",
-        "defHTML": "The term given to the unknown matter or force that explains measurements of galaxy motion that are otherwise inconsistent with the amount of mass associated with the observed amount of photon production} .",
+        "defHTML": "The term given to the unknown matter or force that explains measurements of galaxy motion that are otherwise inconsistent with the amount of mass associated with the observed amount of photon production}.",
         "defLaTeX": "The term given to the unknown  matter or force that explains measurements of galaxy motion  that are otherwise inconsistent with the amount of mass associated  with the observed amount of photon production}  ",
         "term": "dark matter",
         "type": "abbrev"
@@ -831,7 +831,7 @@
     },
     "dnl": {
         "abbrev": "DNL",
-        "defHTML": "A commonly used measure of performance in \\glspl{adc}. The DNL error is defined as the difference between an actual step width and the ideal value of one <a href=\"#lsb\">LSB</a>.",
+        "defHTML": "A commonly used measure of performance in <a href=\"#adc\">ADCs</a>. The DNL error is defined as the difference between an actual step width and the ideal value of one <a href=\"#lsb\">LSB</a>.",
         "defLaTeX": "A commonly used measure of performance in \\glspl{adc}. The DNL error is defined as the difference between an actual step width and the ideal value of one \\gls{lsb}",
         "term": "differential non-linearity",
         "type": "abbrev"
@@ -932,7 +932,7 @@
     },
     "eb": {
         "abbrev": "EB",
-        "defHTML": "A software agent that executes \\glspl{trigcommand} for one <a href=\"#detmodule\">detector module</a> by reading out the requested data.",
+        "defHTML": "A software agent that executes <a href=\"#trigcommand\">trigger commands</a> for one <a href=\"#detmodule\">detector module</a> by reading out the requested data.",
         "defLaTeX": "A software agent that executes \\glspl{trigcommand}  for one  \\gls{detmodule} by reading out the requested data",
         "term": "event builder",
         "type": "abbrev"
@@ -987,8 +987,8 @@
     },
     "enc": {
         "abbrev": "ENC",
-        "defHTML": "The equivalent noise charge is the input charge that corresponds to a$<a href=\"#snr\">\\mbox{S/N}</a>=1$.",
-        "defLaTeX": "The equivalent noise charge is the input charge that corresponds to a$\\gls{snr}=1$",
+        "defHTML": "The equivalent noise charge is the input charge that corresponds to a $<a href=\"#snr\">\\mbox{S/N}</a>=1$.",
+        "defLaTeX": "The equivalent noise charge is the input charge that corresponds to a $\\gls{snr}=1$",
         "term": "equivalent noise charge",
         "type": "abbrev"
     },
@@ -1041,7 +1041,7 @@
     },
     "etl": {
         "abbrev": "ETL",
-        "defHTML": "Trigger processing that consumes <a href=\"#detmodule\">detector module</a> level <a href=\"#trignote\">trigger notification</a> information and other global sources of trigger input and emits <a href=\"#trigcommand\">trigger command</a> information back to the \\glspl{mtl}.",
+        "defHTML": "Trigger processing that consumes <a href=\"#detmodule\">detector module</a> level <a href=\"#trignote\">trigger notification</a> information and other global sources of trigger input and emits <a href=\"#trigcommand\">trigger command</a> information back to the <a href=\"#mtl\">MTLs</a>.",
         "defLaTeX": "Trigger processing  that consumes \\gls{detmodule} level \\gls{trignote} information  and other global sources of trigger input and emits  \\gls{trigcommand} information back to the \\glspl{mtl}",
         "term": "external trigger logic",
         "type": "abbrev"
@@ -1068,7 +1068,7 @@
         "type": "abbrev"
     },
     "externtrigger": {
-        "defHTML": "Information provided to the <a href=\"#mtl\">MTL</a> about events external to a <a href=\"#detmodule\">detector module</a> so that it may be considered in forming \\glspl{trigcommand}.",
+        "defHTML": "Information provided to the <a href=\"#mtl\">MTL</a> about events external to a <a href=\"#detmodule\">detector module</a> so that it may be considered in forming <a href=\"#trigcommand\">trigger commands</a>.",
         "defLaTeX": "Information  provided to the \\gls{mtl} about events external to a  \\gls{detmodule} so that it may be considered in forming  \\glspl{trigcommand}",
         "term": "external trigger candidate",
         "type": "word"
@@ -1136,7 +1136,7 @@
     },
     "femb": {
         "abbrev": "FEMB",
-        "defHTML": "Refers a unit of the <a href=\"#sp\">SP</a> <a href=\"#ce\">CE</a> that contains the <a href=\"#fe\">FE</a> amplifier and <a href=\"#adc\">ADC</a> \\glspl{asic} covering 128 channels.",
+        "defHTML": "Refers a unit of the <a href=\"#sp\">SP</a> <a href=\"#ce\">CE</a> that contains the <a href=\"#fe\">FE</a> amplifier and <a href=\"#adc\">ADC</a> <a href=\"#asic\">ASICs</a> covering 128 channels.",
         "defLaTeX": "Refers a unit of  the \\gls{sp} \\gls{ce} that contains the \\gls{fe} amplifier  and \\gls{adc} \\glspl{asic} covering 128 channels",
         "term": "front-end mother board",
         "type": "abbrev"
@@ -1182,7 +1182,7 @@
     },
     "fmc": {
         "abbrev": "FMC",
-        "defHTML": "Boards holding \\glspl{fpga} and other integrated circuitry that attach to a motherboard.",
+        "defHTML": "Boards holding <a href=\"#fpga\">FPGAs</a> and other integrated circuitry that attach to a motherboard.",
         "defLaTeX": "Boards holding \\glspl{fpga} and other integrated circuitry that attach to a motherboard",
         "term": "FPGA mezzanine card",
         "type": "abbrev"
@@ -1249,21 +1249,21 @@
     },
     "fts": {
         "abbrev": "FTS",
-        "defHTML": "A file transfer system developed at \\fnal to catalog and move data to permanent storage.",
-        "defLaTeX": "A file transfer system developed at \\fnal to catalog and move data to permanent storage",
+        "defHTML": "A file transfer system developed at <a href=\"#fnal\">Fermilab</a> to catalog and move data to permanent storage.",
+        "defLaTeX": "A file transfer system developed at \\gls{fnal} to catalog and move data to permanent storage",
         "term": "File Transfer System",
         "type": "abbrev"
     },
     "ftslite": {
-        "defHTML": "Light-weight version of the \\fnal File Transfer system used for rapid data transfers out of the online systems.",
-        "defLaTeX": "Light-weight version of the \\fnal File Transfer system used for rapid data transfers out of the online systems",
+        "defHTML": "Light-weight version of the <a href=\"#fnal\">Fermilab</a> File Transfer system used for rapid data transfers out of the online systems.",
+        "defLaTeX": "Light-weight version of the \\gls{fnal} File Transfer system used for rapid data transfers out of the online systems",
         "term": "F-FTS-lite",
         "type": "word"
     },
     "fv": {
         "abbrev": "FV",
-        "defHTML": "The detector volume within the <a href=\"#tpc\">TPC</a>that is selected for physics analysis through cuts on reconstructed event position.",
-        "defLaTeX": "The detector volume within the \\gls{tpc}that is selected for physics analysis through cuts on reconstructed event position",
+        "defHTML": "The detector volume within the <a href=\"#tpc\">TPC</a> that is selected for physics analysis through cuts on reconstructed event position.",
+        "defLaTeX": "The detector volume within the \\gls{tpc} that is selected for physics analysis through cuts on reconstructed event position",
         "term": "fiducial volume",
         "type": "abbrev"
     },
@@ -1309,13 +1309,13 @@
         "type": "abbrev"
     },
     "gg": {
-        "defHTML": "An electrode held electrically neutral relative to Earth ground voltage; it is installed between the cathode and the \\glspl{pd} in a <a href=\"#dpmod\">DP module</a> to protect the \\glspl{pmt}, maintaining high transparency to light.",
+        "defHTML": "An electrode held electrically neutral relative to Earth ground voltage; it is installed between the cathode and the <a href=\"#pd\">PDs</a> in a <a href=\"#dpmod\">DP module</a> to protect the <a href=\"#pmt\">PMTs</a>, maintaining high transparency to light.",
         "defLaTeX": "An electrode held electrically neutral relative to Earth ground voltage; it is installed between the cathode and the \\glspl{pd} in a \\gls{dpmod} to protect the \\glspl{pmt}, maintaining high transparency to light",
         "term": "ground grid",
         "type": "word"
     },
     "gibuu": {
-        "defHTML": "Giessen Boltzmann-Uehling-Uhlenback Project; a unified theory and transport framework in the MeV and GeV energy regimes for elementary reactions on nuclei .",
+        "defHTML": "Giessen Boltzmann-Uehling-Uhlenback Project; a unified theory and transport framework in the MeV and GeV energy regimes for elementary reactions on nuclei.",
         "defLaTeX": "Giessen Boltzmann-Uehling-Uhlenback Project; a unified theory and transport framework in the MeV and GeV energy regimes for elementary reactions on nuclei ",
         "term": "GiBUU",
         "type": "word"
@@ -1329,8 +1329,8 @@
     },
     "gp": {
         "abbrev": "GP",
-        "defHTML": "An electrode held electrically neutral relative to Earth ground voltage; it is mounted on the <a href=\"#fc\">FC</a> in a <a href=\"#spmod\">SP module</a> to protect the cryostat wall} .",
-        "defLaTeX": "An electrode held electrically neutral relative to Earth ground voltage; it is mounted on the \\gls{fc} in a \\gls{spmod} to protect the cryostat wall}  ",
+        "defHTML": "An electrode held electrically neutral relative to Earth ground voltage; it is mounted on the <a href=\"#fc\">FC</a> in a <a href=\"#spmod\">SP module</a> to protect the cryostat wall.",
+        "defLaTeX": "An electrode held electrically neutral relative to Earth ground voltage; it is mounted on the \\gls{fc} in a \\gls{spmod} to protect the cryostat wall",
         "term": "ground plane",
         "type": "abbrev"
     },
@@ -1531,7 +1531,7 @@
     },
     "inl": {
         "abbrev": "INL",
-        "defHTML": "A commonly used measure of performance in \\glspl{adc}. It is the deviation between the ideal input threshold value and the measured threshold level of a certain output code.",
+        "defHTML": "A commonly used measure of performance in <a href=\"#adc\">ADCs</a>. It is the deviation between the ideal input threshold value and the measured threshold level of a certain output code.",
         "defLaTeX": "A commonly used measure of performance in \\glspl{adc}. It is the deviation between the ideal input threshold value and the measured threshold level of a certain output code",
         "term": "integral non-linearity",
         "type": "abbrev"
@@ -1648,15 +1648,15 @@
         "type": "word"
     },
     "larpix": {
-        "defHTML": " <a href=\"#asic\">ASIC</a> pixelated charge readout for a <a href=\"#tpc\">TPC</a> .",
+        "defHTML": " <a href=\"#asic\">ASIC</a> pixelated charge readout for a <a href=\"#tpc\">TPC</a>.",
         "defLaTeX": " \\gls{asic} pixelated charge readout for a \\gls{tpc} ",
         "term": "LArPix",
         "type": "word"
     },
     "larsoft": {
         "abbrev": "LArSoft",
-        "defHTML": "A shared base of physics software across <a href=\"#lar\">LAr</a>tpc experiments.",
-        "defLaTeX": "A shared base of physics software across \\gls{lar}tpc experiments",
+        "defHTML": "A shared base of physics software across <a href=\"#lartpc\">LArTPC</a> experiments.",
+        "defLaTeX": "A shared base of physics software across \\gls{lartpc} experiments",
         "term": "Liquid Argon Software",
         "type": "abbrev"
     },
@@ -1848,7 +1848,7 @@
         "type": "abbrev"
     },
     "lux": {
-        "defHTML": "Large Underground Xenon (LUX) dark matter detector at <a href=\"#surf\">SURF</a> .",
+        "defHTML": "Large Underground Xenon (LUX) dark matter detector at <a href=\"#surf\">SURF</a>.",
         "defLaTeX": "Large Underground Xenon (LUX) dark matter detector at \\gls{surf} ",
         "term": "LUX",
         "type": "word"
@@ -1915,14 +1915,14 @@
     },
     "mi": {
         "abbrev": "MI",
-        "defHTML": "An accelerator at \\fnal that provides a beam of high-energy protons that upon striking a target produce secondaries that decay to provide the neutrinos directed toward the DUNE far detector.",
-        "defLaTeX": "An accelerator at  \\fnal that provides a beam of high-energy protons that upon  striking a target produce secondaries that decay to provide the  neutrinos directed toward the DUNE far detector",
+        "defHTML": "An accelerator at <a href=\"#fnal\">Fermilab</a> that provides a beam of high-energy protons that upon striking a target produce secondaries that decay to provide the neutrinos directed toward the DUNE far detector.",
+        "defLaTeX": "An accelerator at  \\gls{fnal} that provides a beam of high-energy protons that upon  striking a target produce secondaries that decay to provide the  neutrinos directed toward the DUNE far detector",
         "term": "Fermilab Main Injector",
         "type": "abbrev"
     },
     "microboone": {
-        "defHTML": "The <a href=\"#lar\">LAr</a>tpc-based \\microboone neutrino oscillation experiment at <a href=\"#fnal\">Fermilab</a>.",
-        "defLaTeX": "The \\gls{lar}tpc-based \\microboone neutrino oscillation experiment at  \\gls{fnal}",
+        "defHTML": "The <a href=\"#lartpc\">LArTPC</a>-based \\microboone neutrino oscillation experiment at <a href=\"#fnal\">Fermilab</a>.",
+        "defLaTeX": "The \\gls{lartpc}-based \\microboone neutrino oscillation experiment at  \\gls{fnal}",
         "term": "MicroBooNE",
         "type": "word"
     },
@@ -2020,7 +2020,7 @@
     },
     "mtl": {
         "abbrev": "MTL",
-        "defHTML": "Trigger processing that consumes <a href=\"#detunit\">detector unit</a> level <a href=\"#trigcommand\">trigger command</a> information and emits \\glspl{trigcommand}. It provides the <a href=\"#etl\">ETL</a> with \\glspl{trignote} and receives back any \\glspl{externtrigger}.",
+        "defHTML": "Trigger processing that consumes <a href=\"#detunit\">detector unit</a> level <a href=\"#trigcommand\">trigger command</a> information and emits <a href=\"#trigcommand\">trigger commands</a>. It provides the <a href=\"#etl\">ETL</a> with <a href=\"#trignote\">trigger notifications</a> and receives back any <a href=\"#externtrigger\">external trigger candidates</a>.",
         "defLaTeX": "Trigger processing  that consumes \\gls{detunit} level \\gls{trigcommand} information  and emits \\glspl{trigcommand}.  It provides the \\gls{etl} with \\glspl{trignote} and receives back any  \\glspl{externtrigger}",
         "term": "module trigger logic",
         "type": "abbrev"
@@ -2065,8 +2065,8 @@
     },
     "nd": {
         "abbrev": "ND",
-        "defHTML": "Refers to the detector(s) installed close to the neutrino source at \\fnal .",
-        "defLaTeX": "Refers to the detector(s) installed close to the neutrino source at \\fnal ",
+        "defHTML": "Refers to the detector(s) installed close to the neutrino source at <a href=\"#fnal\">Fermilab</a>.",
+        "defLaTeX": "Refers to the detector(s) installed close to the neutrino source at \\gls{fnal} ",
         "term": "near detector",
         "type": "abbrev"
     },
@@ -2078,8 +2078,8 @@
         "type": "abbrev"
     },
     "nersc": {
-        "defHTML": "National Energy Research Computing Facility at <a href=\"#lbnl\">LBNL</a>} .",
-        "defLaTeX": "National Energy Research Computing Facility at \\gls{lbnl}}  ",
+        "defHTML": "National Energy Research Computing Facility at <a href=\"#lbnl\">LBNL</a>.",
+        "defLaTeX": "National Energy Research Computing Facility at \\gls{lbnl}",
         "term": "NERSC",
         "type": "word"
     },
@@ -2092,8 +2092,8 @@
     },
     "nexo": {
         "abbrev": "nEXO",
-        "defHTML": "Experiment at Lawrence Livermore National Laboratory (U.S. national lab in Livermore, CA)searching for new physics with neutrinoless double-beta decay.",
-        "defLaTeX": "Experiment at Lawrence Livermore National Laboratory (U.S. national lab in Livermore, CA)searching for new physics with neutrinoless double-beta decay",
+        "defHTML": "Experiment at Lawrence Livermore National Laboratory (U.S. national lab in Livermore, CA) searching for new physics with neutrinoless double-beta decay.",
+        "defLaTeX": "Experiment at Lawrence Livermore National Laboratory (U.S. national lab in Livermore, CA) searching for new physics with neutrinoless double-beta decay",
         "term": "Enriched Xenon Observatory",
         "type": "abbrev"
     },
@@ -2119,8 +2119,8 @@
         "type": "abbrev"
     },
     "nova": {
-        "defHTML": "The \\nova off-axis neutrino oscillation experiment at <a href=\"#fnal\">Fermilab</a>.",
-        "defLaTeX": "The \\nova off-axis neutrino oscillation experiment at \\gls{fnal}",
+        "defHTML": "The <a href=\"#nova\">NOvA</a> off-axis neutrino oscillation experiment at <a href=\"#fnal\">Fermilab</a>.",
+        "defLaTeX": "The \\gls{nova} off-axis neutrino oscillation experiment at \\gls{fnal}",
         "term": "NOvA",
         "type": "word"
     },
@@ -2132,8 +2132,8 @@
     },
     "nscf": {
         "abbrev": "NSCF",
-        "defHTML": "The <a href=\"#cf\">CF</a> at the DUNE near detector site, \\fnal.",
-        "defLaTeX": "The  \\gls{cf} at the DUNE near detector site, \\fnal",
+        "defHTML": "The <a href=\"#cf\">CF</a> at the DUNE near detector site, <a href=\"#fnal\">Fermilab</a>.",
+        "defLaTeX": "The  \\gls{cf} at the DUNE near detector site, \\gls{fnal}",
         "term": "near site conventional facilities",
         "type": "abbrev"
     },
@@ -2158,8 +2158,8 @@
         "type": "word"
     },
     "numi": {
-        "defHTML": "a set of facilities at \\fnal, collectively called ``Neutrinos at the Main Injector.'' The NuMI neutrino beamline target system converts an intense proton beam into a focused neutrino beam.",
-        "defLaTeX": "a set of facilities at \\fnal, collectively called ``Neutrinos at the Main Injector.''  The NuMI neutrino beamline target system converts an intense proton beam into a focused neutrino beam",
+        "defHTML": "a set of facilities at <a href=\"#fnal\">Fermilab</a>, collectively called ``Neutrinos at the Main Injector.'' The NuMI neutrino beamline target system converts an intense proton beam into a focused neutrino beam.",
+        "defLaTeX": "a set of facilities at \\gls{fnal}, collectively called ``Neutrinos at the Main Injector.''  The NuMI neutrino beamline target system converts an intense proton beam into a focused neutrino beam",
         "term": "NuMI",
         "type": "word"
     },
@@ -2262,7 +2262,7 @@
         "type": "word"
     },
     "p6": {
-        "defHTML": "framework used to plan and status the resource-loaded schedule of activities associated with the USA contributions to <a href=\"#lbnf\">LBNF</a> and <a href=\"#dune\">DUNE</a> .",
+        "defHTML": "framework used to plan and status the resource-loaded schedule of activities associated with the USA contributions to <a href=\"#lbnf\">LBNF</a> and <a href=\"#dune\">DUNE</a>.",
         "defLaTeX": "framework used to plan and status the resource-loaded schedule of activities associated with the USA contributions to \\gls{lbnf} and \\gls{dune} ",
         "term": "P6",
         "type": "word"
@@ -2332,7 +2332,7 @@
     },
     "pds": {
         "abbrev": "PD system",
-        "defHTML": "The detector subsystem sensitive to light produced in the <a href=\"#lar\">LAr</a> .",
+        "defHTML": "The detector subsystem sensitive to light produced in the <a href=\"#lar\">LAr</a>.",
         "defLaTeX": "The detector  subsystem sensitive to light produced in the \\gls{lar} ",
         "term": "photon detection system",
         "type": "abbrev"
@@ -2506,8 +2506,8 @@
     },
     "ptb": {
         "abbrev": "PTB",
-        "defHTML": "Backplane used to connect the <a href=\"#wib\">WIB</a>s and the <a href=\"#ptc\">PTC</a>s on the <a href=\"#wiec\">WIEC</a>. Also connects the <a href=\"#ce\">CE</a> flange on the cryostat penetration.",
-        "defLaTeX": "Backplane used to connect the \\gls{wib}s and the \\gls{ptc}s on the \\gls{wiec}. Also connects the \\gls{ce} flange on the cryostat penetration",
+        "defHTML": "Backplane used to connect the <a href=\"#wib\">WIBs</a> and the <a href=\"#ptc\">PTCs</a> on the <a href=\"#wiec\">WIEC</a>. Also connects the <a href=\"#ce\">CE</a> flange on the cryostat penetration.",
+        "defLaTeX": "Backplane used to connect the \\glspl{wib} and the \\glspl{ptc} on the \\gls{wiec}. Also connects the \\gls{ce} flange on the cryostat penetration",
         "term": "power and timing backplane",
         "type": "abbrev"
     },
@@ -2520,8 +2520,8 @@
     },
     "ptp": {
         "abbrev": "PTP",
-        "defHTML": "A<a href=\"#wls\">WLS</a> material.",
-        "defLaTeX": "A\\gls{wls} material",
+        "defHTML": "A <a href=\"#wls\">WLS</a> material.",
+        "defLaTeX": "A \\gls{wls} material",
         "term": "p-terphenyl",
         "type": "abbrev"
     },
@@ -2650,7 +2650,7 @@
         "type": "abbrev"
     },
     "ro": {
-        "defHTML": "An office within the <a href=\"#integoff\">integration office</a> that organizes reviews .",
+        "defHTML": "An office within the <a href=\"#integoff\">integration office</a> that organizes reviews.",
         "defLaTeX": "An office within the \\gls{integoff} that organizes reviews ",
         "term": "review office",
         "type": "word"
@@ -2891,8 +2891,8 @@
     },
     "sls": {
         "abbrev": "SLS",
-        "defHTML": "A system residing at the DUNE far detector site that provides information, possibly predictive, indicating periods of time when neutrinos are being produced by the \\fnal Main Injector beam spills.",
-        "defLaTeX": "A system residing at  the DUNE far detector site that provides information, possibly  predictive, indicating periods of time when neutrinos are being  produced by the \\fnal Main Injector beam spills",
+        "defHTML": "A system residing at the DUNE far detector site that provides information, possibly predictive, indicating periods of time when neutrinos are being produced by the <a href=\"#fnal\">Fermilab</a> Main Injector beam spills.",
+        "defLaTeX": "A system residing at  the DUNE far detector site that provides information, possibly  predictive, indicating periods of time when neutrinos are being  produced by the \\gls{fnal} Main Injector beam spills",
         "term": "spill location system",
         "type": "abbrev"
     },
@@ -2954,8 +2954,8 @@
     },
     "sno": {
         "abbrev": "SNO",
-        "defHTML": "The SudburyNeutrino Observatory was a detector built 6800 feet under ground, inINCO's Creighton mine near Sudbury, Ontario, Canada. SNO was aheavy-water Cherenkov detector designed to detect neutrinos producedby fusion reactions in the sun.",
-        "defLaTeX": "The SudburyNeutrino Observatory was a detector built 6800 feet under ground, inINCO's Creighton mine near Sudbury, Ontario, Canada. SNO was aheavy-water Cherenkov detector designed to detect neutrinos producedby fusion reactions in the sun",
+        "defHTML": "The Sudbury Neutrino Observatory was a detector built 6800 feet under ground, in INCO's Creighton mine near Sudbury, Ontario, Canada. SNO was a heavy-water Cherenkov detector designed to detect neutrinos produced by fusion reactions in the sun.",
+        "defLaTeX": "The Sudbury Neutrino Observatory was a detector built 6800 feet under ground, in INCO's Creighton mine near Sudbury, Ontario, Canada. SNO was a heavy-water Cherenkov detector designed to detect neutrinos produced by fusion reactions in the sun",
         "term": "Sudbury Neutrino Observatory",
         "type": "abbrev"
     },
@@ -3083,8 +3083,8 @@
         "type": "abbrev"
     },
     "tc": {
-        "defHTML": "The DUNE organization responsible for overall integrationof the detector elements and successful execution of the detectorconstruction project; areas of responsibility includegeneral project oversight, systems engineering, <a href=\"#qa\">QA</a>and safety.",
-        "defLaTeX": "The DUNE organization responsible for overall integrationof the detector elements and successful execution of the detectorconstruction project; areas of responsibility includegeneral project oversight, systems engineering, \\gls{qa}and safety",
+        "defHTML": "The DUNE organization responsible for overall integrationof the detector elements and successful execution of the detectorconstruction project; areas of responsibility includegeneral project oversight, systems engineering, <a href=\"#qa\">QA</a> and safety.",
+        "defLaTeX": "The DUNE organization responsible for overall integrationof the detector elements and successful execution of the detectorconstruction project; areas of responsibility includegeneral project oversight, systems engineering, \\gls{qa} and safety",
         "term": "technical coordination",
         "type": "word"
     },
@@ -3165,13 +3165,13 @@
         "type": "word"
     },
     "trigcommand": {
-        "defHTML": "Information derived from one or more \\glspl{trigcandidate} that directs elements of the <a href=\"#detmodule\">detector module</a> to read out a portion of the data stream.",
+        "defHTML": "Information derived from one or more <a href=\"#trigcandidate\">trigger candidates</a> that directs elements of the <a href=\"#detmodule\">detector module</a> to read out a portion of the data stream.",
         "defLaTeX": "Information derived from  one or more \\glspl{trigcandidate}  that directs elements of the  \\gls{detmodule} to read out a portion of the data stream",
         "term": "trigger command",
         "type": "word"
     },
     "trigdecision": {
-        "defHTML": "The process by which \\glspl{trigcandidate} are converted into \\glspl{trigcommand}.",
+        "defHTML": "The process by which <a href=\"#trigcandidate\">trigger candidates</a> are converted into <a href=\"#trigcommand\">trigger commands</a>.",
         "defLaTeX": "The process by which  \\glspl{trigcandidate} are converted into \\glspl{trigcommand}",
         "term": "trigger decision",
         "type": "word"
@@ -3293,8 +3293,8 @@
     },
     "wct": {
         "abbrev": "WCT",
-        "defHTML": "A software toolkit with data flow processing components for <a href=\"#lar\">LAr</a>tpc noise and signal simulation, noise filtering, signal processing, and tomographic \\threed ionization activity imaging.",
-        "defLaTeX": "A software toolkit with data flow processing components for \\gls{lar}tpc noise and signal simulation, noise filtering, signal processing, and tomographic \\threed ionization activity imaging",
+        "defHTML": "A software toolkit with data flow processing components for <a href=\"#lartpc\">LArTPC</a> noise and signal simulation, noise filtering, signal processing, and tomographic \\threed ionization activity imaging.",
+        "defLaTeX": "A software toolkit with data flow processing components for \\gls{lartpc} noise and signal simulation, noise filtering, signal processing, and tomographic \\threed ionization activity imaging",
         "term": "Wire-Cell Toolkit",
         "type": "abbrev"
     },
@@ -3307,14 +3307,14 @@
     },
     "wib": {
         "abbrev": "WIB",
-        "defHTML": "Digital electronics situated just outside the <a href=\"#sp\">SP</a> cryostat that receives digital data from the \\glspl{femb} over cold copper connections and sends it to the <a href=\"#rce\">RCE</a> <a href=\"#fe\">FE</a> readout hardware.",
+        "defHTML": "Digital electronics situated just outside the <a href=\"#sp\">SP</a> cryostat that receives digital data from the <a href=\"#femb\">FEMBs</a> over cold copper connections and sends it to the <a href=\"#rce\">RCE</a> <a href=\"#fe\">FE</a> readout hardware.",
         "defLaTeX": "Digital electronics  situated just outside the \\gls{sp} cryostat that receives digital data  from the \\glspl{femb} over cold copper connections and sends it to the \\gls{rce}  \\gls{fe} readout hardware",
         "term": "warm interface board",
         "type": "abbrev"
     },
     "wiec": {
         "abbrev": "WIEC",
-        "defHTML": "Crates mounted on the signal flanges that contain the \\glspl{wib}.",
+        "defHTML": "Crates mounted on the signal flanges that contain the <a href=\"#wib\">WIBs</a>.",
         "defLaTeX": "Crates mounted on the signal flanges that contain the \\glspl{wib}",
         "term": "warm interface electronics crate",
         "type": "abbrev"
@@ -3327,14 +3327,14 @@
         "type": "abbrev"
     },
     "wire board": {
-        "defHTML": "At the head end of the APA in the <a href=\"#sp\">SP</a> TPC, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires. They also provide the connection between the wires and the cold electronics.",
-        "defLaTeX": "At the head end of the APA in the \\gls{sp} TPC, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires.  They also provide the connection between the wires and the cold electronics",
+        "defHTML": "At the head end of the APA in the <a href=\"#sp\">SP</a> <a href=\"#tpc\">TPC</a>, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires. They also provide the connection between the wires and the cold electronics.",
+        "defLaTeX": "At the head end of the APA in the \\gls{sp} \\gls{tpc}, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires.  They also provide the connection between the wires and the cold electronics",
         "term": "wire board",
         "type": "word"
     },
     "wirecell": {
-        "defHTML": "A tomographic automated \\threed neutrino event reconstruction method for <a href=\"#lar\">LAr</a>tpc{}s.",
-        "defLaTeX": "A tomographic automated \\threed neutrino event reconstruction method for \\gls{lar}tpc{}s",
+        "defHTML": "A tomographic automated \\threed neutrino event reconstruction method for <a href=\"#lartpc\">LArTPCs</a>.",
+        "defLaTeX": "A tomographic automated \\threed neutrino event reconstruction method for \\glspl{lartpc}",
         "term": "Wire-Cell",
         "type": "word"
     },

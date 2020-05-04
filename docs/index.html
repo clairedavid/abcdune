@@ -157,7 +157,7 @@
   <dt id = "cisc">CISC</dt>
   <dd>cryogenic instrumentation and slow controls<br>Includes equipment to monitor all detector components and <a href="#lar">LAr</a> quality and behavior, and provides a control system for many of the detector components.</dd>
   <dt id = "citf">CITF</dt>
-  <dd>cryogenic instrumentation test facility<br>A facility at \fnal with small ($<\,\SI{1}{ton}$) to intermediate ($\sim\,\SI{1}{ton}$) volumes of instrumented, purified TPC-grade <a href="#lar">LAr</a>, used for testing devices intended for use in <a href="#dune">DUNE</a>.</dd>
+  <dd>cryogenic instrumentation test facility<br>A facility at <a href="#fnal">Fermilab</a> with small ($<\,\SI{1}{ton}$) to intermediate ($\sim\,\SI{1}{ton}$) volumes of instrumented, purified TPC-grade <a href="#lar">LAr</a>, used for testing devices intended for use in <a href="#dune">DUNE</a>.</dd>
   <dt id = "ckm">CKM matrix</dt>
   <dd>Cabibbo-Kobayashi-Maskawa  matrix<br>Refers to the matrix describing the mixing between mass and weak eigenstates of quarks.</dd>
   <dt id = "cl">CL</dt>
@@ -191,7 +191,7 @@
   <dt id = "cpa">CPA</dt>
   <dd>cathode plane assembly<br>The component of the <a href="#sp">SP</a> detector module that provides the drift HV cathode.</dd>
   <dt id = "cpafc">CPA/FC</dt>
-  <dd>A pair of <a href="#cpa">CPA</a> panels and the top and bottom <a href="#fc">FC</a> portions that attach to the pair; an intermediate assembly for installation into the <a href="#spmod">SP module</a> .</dd>
+  <dd>A pair of <a href="#cpa">CPA</a> panels and the top and bottom <a href="#fc">FC</a> portions that attach to the pair; an intermediate assembly for installation into the <a href="#spmod">SP module</a>.</dd>
   <dt id = "cpt">CPT</dt>
   <dd>charge, parity, and time reversal symmetry<br>product of charge, parity and time-reversal transformations.</dd>
   <dt id = "cpv">CPV</dt>
@@ -242,27 +242,27 @@
   <dt id = "daqdr">DDR</dt>
   <dd>DAQ data receiver<br>The portion of the <a href="#daqfrag">DAQ front-end fragment</a> that accepts data from the <a href="#daqfer">FER</a>, emits trigger candidates produced from the input trigger primitives, and forwards the full data stream to the <a href="#daqbuf">DAQ primary buffer</a>.</dd>
   <dt id = "daqds">data selector</dt>
-  <dd>The portion of the <a href="#daqfrag">DAQ front-end fragment</a> that accepts \glspl{trigcommand} and returns the corresponding <a href="#datafrag">data fragment</a>. Not to be confused with <a href="#daqdsn">data selection</a>.</dd>
+  <dd>The portion of the <a href="#daqfrag">DAQ front-end fragment</a> that accepts <a href="#trigcommand">trigger commands</a> and returns the corresponding <a href="#datafrag">data fragment</a>. Not to be confused with <a href="#daqdsn">data selection</a>.</dd>
   <dt id = "daqdsn">data selection</dt>
   <dd>The process of forming a trigger decision for selecting a subset of detector data for output by the <a href="#daq">DAQ</a> from the content of the detector data itself. Not to be confused with <a href="#daqds">data selector</a>.</dd>
   <dt id = "daqdss">DAQ DS</dt>
   <dd>DAQ data selection subsystem<br>The subsystem of the <a href="#daq">DAQ</a> responsible for forming a trigger decision based on a portion of the input data stream. The majority subset of the <a href="#daqtrs">DAQ TS</a>.</dd>
   <dt id = "daqeti">ETI</dt>
-  <dd>external trigger interface<br>Interface between \glspl{mtl} and external source and sinks of relevant trigger information.</dd>
+  <dd>external trigger interface<br>Interface between <a href="#mtl">MTLs</a> and external source and sinks of relevant trigger information.</dd>
   <dt id = "daqfer">FER</dt>
   <dd>DAQ front-end readout<br>The portion of a <a href="#daqfrag">DAQ front-end fragment</a> that accepts data from the detector electronics and provides it to the <a href="#fec">DAQ FEC</a>.</dd>
   <dt id = "daqfrag">DAQ front-end fragment</dt>
-  <dd>The portion of one <a href="#daqpart">DAQ partition</a> relating to a single <a href="#fec">DAQ FEC</a> and corresponding to an integral number of \glspl{detunit}. See also <a href="#datafrag">data fragment</a>.</dd>
+  <dd>The portion of one <a href="#daqpart">DAQ partition</a> relating to a single <a href="#fec">DAQ FEC</a> and corresponding to an integral number of <a href="#detunit">detector units</a>. See also <a href="#datafrag">data fragment</a>.</dd>
   <dt id = "daqoob">OOB dispatcher</dt>
-  <dd>out-of-band trigger command  dispatcher<br>This component is responsible for dispatching a <a href="#snb">SNB</a> dump command to all \glspl{daqfer} in the <a href="#detmodule">detector module</a>.</dd>
+  <dd>out-of-band trigger command  dispatcher<br>This component is responsible for dispatching a <a href="#snb">SNB</a> dump command to all <a href="#daqfer">FERs</a> in the <a href="#detmodule">detector module</a>.</dd>
   <dt id = "daqpart">DAQ partition</dt>
-  <dd>A cohesive and coherent collection of <a href="#daq">DAQ</a> hardware and software working together to trigger and read out some portion of one detector module; it consists of an integral number of \glspl{daqfrag}. Multiple <a href="#daq">DAQ</a> partitions may operate simultaneously, but each instance operates independently.</dd>
+  <dd>A cohesive and coherent collection of <a href="#daq">DAQ</a> hardware and software working together to trigger and read out some portion of one detector module; it consists of an integral number of <a href="#daqfrag">DAQ front-end fragments</a>. Multiple <a href="#daq">DAQ</a> partitions may operate simultaneously, but each instance operates independently.</dd>
   <dt id = "daqros">DAQ RO</dt>
   <dd>DAQ readout subsystem<br>The subsystem of the <a href="#daq">DAQ</a> for accepting and buffering data input from detector electronics.</dd>
   <dt id = "daqrou">DAQ RU</dt>
   <dd>DAQ readout unit<br>The first element in the data flow of the <a href="#daq">DAQ</a>.</dd>
   <dt id = "daqrun">DAQ run</dt>
-  <dd>A period of time over which relevant data taking conditions and <a href="#daq">DAQ</a> configuration are asserted to be unchanged. Multiple <a href="#daq">DAQ</a> runs may occur simultaneously when multiple \glspl{daqpart} are active. This term should not be confused with DUNE experiment or beam ``runs'' that typically span many <a href="#daq">DAQ</a> runs.</dd>
+  <dd>A period of time over which relevant data taking conditions and <a href="#daq">DAQ</a> configuration are asserted to be unchanged. Multiple <a href="#daq">DAQ</a> runs may occur simultaneously when multiple <a href="#daqpart">DAQ partitions</a> are active. This term should not be confused with DUNE experiment or beam ``runs'' that typically span many <a href="#daq">DAQ</a> runs.</dd>
   <dt id = "daqrunnum">DAQ run number</dt>
   <dd>A monotonically increasing count that uniquely and globally identifies a <a href="#daqrun">DAQ run</a>.</dd>
   <dt id = "daqtrs">DAQ TS</dt>
@@ -288,17 +288,17 @@
   <dt id = "detunit">detector unit</dt>
   <dd>Aportion of a <a href="#detmodule">detector module</a> may be further partitioned into a number of similar parts.  For example the <a href="#sp">SP</a> <a href="#tpc">TPC</a>is made up of <a href="#apa">APA</a> units (and other elements).</dd>
   <dt id = "dirac">DIRAC</dt>
-  <dd>Computing workflow management designed forLHCb and now used by many HEP experiments.</dd>
+  <dd>Computing workflow management designed for LHCb and now used by many HEP experiments.</dd>
   <dt id = "dis">DIS</dt>
   <dd>deep inelastic scattering<br>Refers to the interaction of an elementary charged particle with a nucleus in an energy range where the interaction can be modeled as taking place with individual nucleons.</dd>
   <dt id = "diskbuffer">secondary DAQ buffer</dt>
   <dd>A secondary \dshort{daq} buffer holds a small subset of the full rate as selected by a <a href="#trigcommand">trigger command</a>. This buffer also marks the interface with the DUNE Offline.</dd>
   <dt id = "dm">DM</dt>
-  <dd>dark matter<br>The term given to the unknown matter or force that explains measurements of galaxy motion that are otherwise inconsistent with the amount of mass associated with the observed amount of photon production} .</dd>
+  <dd>dark matter<br>The term given to the unknown matter or force that explains measurements of galaxy motion that are otherwise inconsistent with the amount of mass associated with the observed amount of photon production}.</dd>
   <dt id = "dmp">DMP</dt>
   <dd>data management plan.</dd>
   <dt id = "dnl">DNL</dt>
-  <dd>differential non-linearity<br>A commonly used measure of performance in \glspl{adc}. The DNL error is defined as the difference between an actual step width and the ideal value of one <a href="#lsb">LSB</a>.</dd>
+  <dd>differential non-linearity<br>A commonly used measure of performance in <a href="#adc">ADCs</a>. The DNL error is defined as the difference between an actual step width and the ideal value of one <a href="#lsb">LSB</a>.</dd>
   <dt id = "docdb">DocDB</dt>
   <dd>Document DataBase<br>A computerized document management system developed and supported at <a href="#fnal">Fermilab</a> in which virtually all LBNF and most DUNE documents are managed.</dd>
   <dt id = "doe">DOE</dt>
@@ -324,14 +324,14 @@
   <dt id = "dune">DUNE</dt>
   <dd>Deep Underground Neutrino Experiment<br>A leading-edge, international experiment for neutrino science and proton decay studies.</dd>
   <dt id = "duneprism">DUNE-PRISM</dt>
-  <dd>\gls{dune} Precision Reaction-Independent Spectrum Measurement<br>a mobile near detector that can perform measurements over a range of angles off-axis from the neutrino beam direction in order to sample many different neutrino energy distributions.</dd>
+  <dd><a href="#dune">DUNE</a> Precision Reaction-Independent Spectrum Measurement<br>a mobile near detector that can perform measurements over a range of angles off-axis from the neutrino beam direction in order to sample many different neutrino energy distributions.</dd>
   <dt id = "dword">DUNE Word</dt>
   <dd>A term in the DUNE lexicon.</dd>
 </dl>
 <h1 id="E">E</h1>
 <dl>
   <dt id = "eb">EB</dt>
-  <dd>event builder<br>A software agent that executes \glspl{trigcommand} for one <a href="#detmodule">detector module</a> by reading out the requested data.</dd>
+  <dd>event builder<br>A software agent that executes <a href="#trigcommand">trigger commands</a> for one <a href="#detmodule">detector module</a> by reading out the requested data.</dd>
   <dt id = "ecal">ECAL</dt>
   <dd>electromagnetic calorimeter<br>A detector component that measures energy deposition of traversing particles (in the near detector conceptual design).</dd>
   <dt id = "ecr">ECR</dt>
@@ -347,7 +347,7 @@
   <dt id = "emi">EMI</dt>
   <dd>electromagnetic interference<br>Disturbance generated by an external source that affects an electrical circuit by electromagnetic induction, electrostatic coupling, or conduction.</dd>
   <dt id = "enc">ENC</dt>
-  <dd>equivalent noise charge<br>The equivalent noise charge is the input charge that corresponds to a$<a href="#snr">\mbox{S/N}</a>=1$.</dd>
+  <dd>equivalent noise charge<br>The equivalent noise charge is the input charge that corresponds to a $<a href="#snr">\mbox{S/N}</a>=1$.</dd>
   <dt id = "enob">ENOB</dt>
   <dd>effective number of bits<br>The effective number of bits is a measure of the dynamic range of an <a href="#adc">ADC</a> and its associated circuitry. The resolution of an <a href="#adc">ADC</a> is specified by the number of bits used to represent the analog value, in principle giving 2N signal levels for an N-bit signal. However, all real <a href="#adc">ADC</a> circuits introduce noise and distortion. ENOB specifies the resolution of an ideal <a href="#adc">ADC</a> circuit that would have the same resolution as the circuit under consideration.</dd>
   <dt id = "eos">EOS</dt>
@@ -363,7 +363,7 @@
   <dt id = "espp">ESPP</dt>
   <dd>European Strategy for Particle Physics<br>Thecornerstone of Europe'sdecision-making process for the long-term future of thefield. Mandated by the <a href="#cern">CERN</a> Council, it is formed through a broadconsultation of the grass-roots particle physics community, itactively solicits the opinions of physicists from around the world,and it is developed in close coordination with similar processes inthe USA and Japan in order to ensure coordination between regions andoptimal use of resources globally.</dd>
   <dt id = "etl">ETL</dt>
-  <dd>external trigger logic<br>Trigger processing that consumes <a href="#detmodule">detector module</a> level <a href="#trignote">trigger notification</a> information and other global sources of trigger input and emits <a href="#trigcommand">trigger command</a> information back to the \glspl{mtl}.</dd>
+  <dd>external trigger logic<br>Trigger processing that consumes <a href="#detmodule">detector module</a> level <a href="#trignote">trigger notification</a> information and other global sources of trigger input and emits <a href="#trigcommand">trigger command</a> information back to the <a href="#mtl">MTLs</a>.</dd>
   <dt id = "evms">EVMS</dt>
   <dd>earned value management system<br>Earned Value Management is a systematic approach to the integration and measurement of cost, schedule, and technical (scope) accomplishments on a project or task. It provides both the government and contractors the ability to examine detailed schedule information, critical program and technical milestones, and cost data (text from the US DOE); the EVMS is a system that implements this approach.</dd>
   <dt id = "ewfc">endwall FC</dt>
@@ -371,7 +371,7 @@
   <dt id = "exb">EB</dt>
   <dd>executive board<br>The highest level DUNE decision-making body for the collaboration.</dd>
   <dt id = "externtrigger">external trigger candidate</dt>
-  <dd>Information provided to the <a href="#mtl">MTL</a> about events external to a <a href="#detmodule">detector module</a> so that it may be considered in forming \glspl{trigcommand}.</dd>
+  <dd>Information provided to the <a href="#mtl">MTL</a> about events external to a <a href="#detmodule">detector module</a> so that it may be considered in forming <a href="#trigcommand">trigger commands</a>.</dd>
 </dl>
 <h1 id="F">F</h1>
 <dl>
@@ -394,7 +394,7 @@
   <dt id = "felix">FELIX</dt>
   <dd>Front-End Link eXchange<br>A high-throughput interface between <a href="#fe">FE</a> and trigger electronics and the standard PCIe computer bus.</dd>
   <dt id = "femb">FEMB</dt>
-  <dd>front-end mother board<br>Refers a unit of the <a href="#sp">SP</a> <a href="#ce">CE</a> that contains the <a href="#fe">FE</a> amplifier and <a href="#adc">ADC</a> \glspl{asic} covering 128 channels.</dd>
+  <dd>front-end mother board<br>Refers a unit of the <a href="#sp">SP</a> <a href="#ce">CE</a> that contains the <a href="#fe">FE</a> amplifier and <a href="#adc">ADC</a> <a href="#asic">ASICs</a> covering 128 channels.</dd>
   <dt id = "feshm">FESHM</dt>
   <dd>Fermilab Environment, Safety and Health Manual<br>The document that contains Fermilab's policies and procedures designed to manage environment, safety, and health in all its programs.</dd>
   <dt id = "fft">FFT</dt>
@@ -408,7 +408,7 @@
   <dt id = "fls">FLS</dt>
   <dd>fire and life safety system<br>Part of the safety system at <a href="#surf">SURF</a>.</dd>
   <dt id = "fmc">FMC</dt>
-  <dd>FPGA mezzanine card<br>Boards holding \glspl{fpga} and other integrated circuitry that attach to a motherboard.</dd>
+  <dd>FPGA mezzanine card<br>Boards holding <a href="#fpga">FPGAs</a> and other integrated circuitry that attach to a motherboard.</dd>
   <dt id = "fnal">Fermilab</dt>
   <dd>Fermi National Accelerator Laboratory<br>U.S. national laboratory in Batavia, IL. It is the laboratory that hosts <a href="#dune">DUNE</a> and serves as its near site.</dd>
   <dt id = "fpga">FPGA</dt>
@@ -428,11 +428,11 @@
   <dt id = "fte">FTE</dt>
   <dd>full-time equivalent. A unit of labor for the project. One year of work from one person.</dd>
   <dt id = "fts">FTS</dt>
-  <dd>File Transfer System<br>A file transfer system developed at \fnal to catalog and move data to permanent storage.</dd>
+  <dd>File Transfer System<br>A file transfer system developed at <a href="#fnal">Fermilab</a> to catalog and move data to permanent storage.</dd>
   <dt id = "ftslite">F-FTS-lite</dt>
-  <dd>Light-weight version of the \fnal File Transfer system used for rapid data transfers out of the online systems.</dd>
+  <dd>Light-weight version of the <a href="#fnal">Fermilab</a> File Transfer system used for rapid data transfers out of the online systems.</dd>
   <dt id = "fv">FV</dt>
-  <dd>fiducial volume<br>The detector volume within the <a href="#tpc">TPC</a>that is selected for physics analysis through cuts on reconstructed event position.</dd>
+  <dd>fiducial volume<br>The detector volume within the <a href="#tpc">TPC</a> that is selected for physics analysis through cuts on reconstructed event position.</dd>
   <dt id = "fwhm">FWHM</dt>
   <dd>full width at half maximum<br>Width of a distribution measured between those points at which the distribution is equal to half of its maximum amplitude.</dd>
 </dl>
@@ -449,13 +449,13 @@
   <dt id = "genie">GENIE</dt>
   <dd>Generates Events for Neutrino Interaction  Experiments<br>Software providing an object-oriented neutrino interaction simulation resulting in kinematics of the products of the interaction.</dd>
   <dt id = "gg">ground grid</dt>
-  <dd>An electrode held electrically neutral relative to Earth ground voltage; it is installed between the cathode and the \glspl{pd} in a <a href="#dpmod">DP module</a> to protect the \glspl{pmt}, maintaining high transparency to light.</dd>
+  <dd>An electrode held electrically neutral relative to Earth ground voltage; it is installed between the cathode and the <a href="#pd">PDs</a> in a <a href="#dpmod">DP module</a> to protect the <a href="#pmt">PMTs</a>, maintaining high transparency to light.</dd>
   <dt id = "gibuu">GiBUU</dt>
-  <dd>Giessen Boltzmann-Uehling-Uhlenback Project; a unified theory and transport framework in the MeV and GeV energy regimes for elementary reactions on nuclei .</dd>
+  <dd>Giessen Boltzmann-Uehling-Uhlenback Project; a unified theory and transport framework in the MeV and GeV energy regimes for elementary reactions on nuclei.</dd>
   <dt id = "globes">GLoBES</dt>
   <dd>General Long-Baseline Experiment  Simulator<br>A software package for simulating energy spectra of neutrino flux, interactions, and energy spectra measured after application of some model of a detector response).</dd>
   <dt id = "gp">GP</dt>
-  <dd>ground plane<br>An electrode held electrically neutral relative to Earth ground voltage; it is mounted on the <a href="#fc">FC</a> in a <a href="#spmod">SP module</a> to protect the cryostat wall} .</dd>
+  <dd>ground plane<br>An electrode held electrically neutral relative to Earth ground voltage; it is mounted on the <a href="#fc">FC</a> in a <a href="#spmod">SP module</a> to protect the cryostat wall.</dd>
   <dt id = "gpib">GPIB</dt>
   <dd>general purpose interface bus.</dd>
   <dt id = "gps">GPS</dt>
@@ -521,7 +521,7 @@
   <dt id = "inc">INC</dt>
   <dd>International Neutrino Council<br>A highest-level international advisory body to the U.S. <a href="#doe">DOE</a> and the <a href="#fnal">Fermilab</a> directorate on matters related to the <a href="#lbnf">LBNF</a> and the <a href="#pip2">PIP-II</a> projects. This council is composed of representatives from the international funding agencies and <a href="#cern">CERN</a> that make major contributions the infrastructure.</dd>
   <dt id = "inl">INL</dt>
-  <dd>integral non-linearity<br>A commonly used measure of performance in \glspl{adc}. It is the deviation between the ideal input threshold value and the measured threshold level of a certain output code.</dd>
+  <dd>integral non-linearity<br>A commonly used measure of performance in <a href="#adc">ADCs</a>. It is the deviation between the ideal input threshold value and the measured threshold level of a certain output code.</dd>
   <dt id = "integoff">integration office</dt>
   <dd>The office that incorporates the onsite team responsible for coordinating integration and installation activities at SURF.</dd>
   <dt id = "io">IO</dt>
@@ -566,9 +566,9 @@
   <dt id = "lariat">LArIAT</dt>
   <dd>The repurposed ArgoNeuT <a href="#lartpc">LArTPC</a>, modified for use in a charged particle beam, dedicated to the calibration and precise characterization of the output response of these detectors.</dd>
   <dt id = "larpix">LArPix</dt>
-  <dd> <a href="#asic">ASIC</a> pixelated charge readout for a <a href="#tpc">TPC</a> .</dd>
+  <dd> <a href="#asic">ASIC</a> pixelated charge readout for a <a href="#tpc">TPC</a>.</dd>
   <dt id = "larsoft">LArSoft</dt>
-  <dd>Liquid Argon Software<br>A shared base of physics software across <a href="#lar">LAr</a>tpc experiments.</dd>
+  <dd>Liquid Argon Software<br>A shared base of physics software across <a href="#lartpc">LArTPC</a> experiments.</dd>
   <dt id = "lartpc">LArTPC</dt>
   <dd>liquid argon time-projection chamber<br>A <a href="#tpc">TPC</a> filled with liquid argon;the basis for the <a href="#dune">DUNE</a> <a href="#fd">FD</a> modules.</dd>
   <dt id = "las">LAS</dt>
@@ -626,7 +626,7 @@
   <dt id = "lsst">LSST</dt>
   <dd>Large Synoptic Survey Telescope<br>8.4 m telescope with 3.2G-pixel camera that will start taking data in 2023.</dd>
   <dt id = "lux">LUX</dt>
-  <dd>Large Underground Xenon (LUX) dark matter detector at <a href="#surf">SURF</a> .</dd>
+  <dd>Large Underground Xenon (LUX) dark matter detector at <a href="#surf">SURF</a>.</dd>
   <dt id = "lv">LV</dt>
   <dd>low voltage.</dd>
   <dt id = "lvds">LVDS</dt>
@@ -649,9 +649,9 @@
   <dt id = "mh">MH</dt>
   <dd>mass hierarchy<br>Describes the separation between the mass squared differences related to the solar and atmospheric neutrino problems.</dd>
   <dt id = "mi">MI</dt>
-  <dd>Fermilab Main Injector<br>An accelerator at \fnal that provides a beam of high-energy protons that upon striking a target produce secondaries that decay to provide the neutrinos directed toward the DUNE far detector.</dd>
+  <dd>Fermilab Main Injector<br>An accelerator at <a href="#fnal">Fermilab</a> that provides a beam of high-energy protons that upon striking a target produce secondaries that decay to provide the neutrinos directed toward the DUNE far detector.</dd>
   <dt id = "microboone">MicroBooNE</dt>
-  <dd>The <a href="#lar">LAr</a>tpc-based \microboone neutrino oscillation experiment at <a href="#fnal">Fermilab</a>.</dd>
+  <dd>The <a href="#lartpc">LArTPC</a>-based \microboone neutrino oscillation experiment at <a href="#fnal">Fermilab</a>.</dd>
   <dt id = "minerva">MINERvA</dt>
   <dd>The \minerva neutrino cross sections experiment at <a href="#fnal">Fermilab</a>.</dd>
   <dt id = "minipod">MiniPOD</dt>
@@ -681,7 +681,7 @@
   <dt id = "msw">MSW</dt>
   <dd>Mikheyev-Smirnov-Wolfenstein effect<br>Explains the oscillatory behavior of neutrinos produced inside the sun as they traverse the solar matter.</dd>
   <dt id = "mtl">MTL</dt>
-  <dd>module trigger logic<br>Trigger processing that consumes <a href="#detunit">detector unit</a> level <a href="#trigcommand">trigger command</a> information and emits \glspl{trigcommand}. It provides the <a href="#etl">ETL</a> with \glspl{trignote} and receives back any \glspl{externtrigger}.</dd>
+  <dd>module trigger logic<br>Trigger processing that consumes <a href="#detunit">detector unit</a> level <a href="#trigcommand">trigger command</a> information and emits <a href="#trigcommand">trigger commands</a>. It provides the <a href="#etl">ETL</a> with <a href="#trignote">trigger notifications</a> and receives back any <a href="#externtrigger">external trigger candidates</a>.</dd>
   <dt id = "mu2e">Mu2e</dt>
   <dd>An experiment sited at <a href="#fnal">Fermilab</a> that searches for charged-lepton flavor violation and seeks to discover physics beyond the <a href="#sm">SM</a>.</dd>
   <dt id = "mwpc">MWPC</dt>
@@ -698,15 +698,15 @@
   <dt id = "ncg">NCG</dt>
   <dd>Neutrino Cost Group<br>A group of internationally prominent scientists with relevant experience that is charged by the <a href="#fnal">Fermilab</a> director to review the cost, schedule, and associated risks for the <a href="#dune">DUNE</a> experiment.</dd>
   <dt id = "nd">ND</dt>
-  <dd>near detector<br>Refers to the detector(s) installed close to the neutrino source at \fnal .</dd>
+  <dd>near detector<br>Refers to the detector(s) installed close to the neutrino source at <a href="#fnal">Fermilab</a>.</dd>
   <dt id = "ndk">NDK</dt>
   <dd>nucleon decay<br>The hypothetical, baryon number violating decay of a proton or a bound neutron into lighter particles.</dd>
   <dt id = "nersc">NERSC</dt>
-  <dd>National Energy Research Computing Facility at <a href="#lbnl">LBNL</a>} .</dd>
+  <dd>National Energy Research Computing Facility at <a href="#lbnl">LBNL</a>.</dd>
   <dt id = "neut">NEUT</dt>
   <dd>neutrino interaction generator<br>A neutrino interaction simulation program library for the studies of atmospheric accelerator neutrinos.</dd>
   <dt id = "nexo">nEXO</dt>
-  <dd>Enriched Xenon Observatory<br>Experiment at Lawrence Livermore National Laboratory (U.S. national lab in Livermore, CA)searching for new physics with neutrinoless double-beta decay.</dd>
+  <dd>Enriched Xenon Observatory<br>Experiment at Lawrence Livermore National Laboratory (U.S. national lab in Livermore, CA) searching for new physics with neutrinoless double-beta decay.</dd>
   <dt id = "nh">NH</dt>
   <dd>normal hierarchy<br>Refers to the neutrino mass eigenstate ordering whereby the sign of the mass squared difference associated with the atmospheric neutrino problem is positive.</dd>
   <dt id = "nic">NIC</dt>
@@ -714,11 +714,11 @@
   <dt id = "no">NO</dt>
   <dd>normal ordering<br>Refers to the neutrino mass eigenstate ordering whereby the sign of the mass squared difference associated with the atmospheric neutrino problem is positive.</dd>
   <dt id = "nova">NOvA</dt>
-  <dd>The \nova off-axis neutrino oscillation experiment at <a href="#fnal">Fermilab</a>.</dd>
+  <dd>The <a href="#nova">NOvA</a> off-axis neutrino oscillation experiment at <a href="#fnal">Fermilab</a>.</dd>
   <dt id = "np04">NP04</dt>
   <dd>CERN North Area hadron beamline used for the <a href="#sp">SP</a> test beam run.</dd>
   <dt id = "nscf">NSCF</dt>
-  <dd>near site conventional facilities<br>The <a href="#cf">CF</a> at the DUNE near detector site, \fnal.</dd>
+  <dd>near site conventional facilities<br>The <a href="#cf">CF</a> at the DUNE near detector site, <a href="#fnal">Fermilab</a>.</dd>
   <dt id = "nsi">NSI</dt>
   <dd>nonstandard interaction<br>A general class of theory of elementary particles other than the Standard Model.</dd>
   <dt id = "ntp">NTP</dt>
@@ -726,7 +726,7 @@
   <dt id = "nufit">NuFIT 4.0</dt>
   <dd>The NuFIT 4.0 global fit to neutrino oscillation data.</dd>
   <dt id = "numi">NuMI</dt>
-  <dd>a set of facilities at \fnal, collectively called ``Neutrinos at the Main Injector.'' The NuMI neutrino beamline target system converts an intense proton beam into a focused neutrino beam.</dd>
+  <dd>a set of facilities at <a href="#fnal">Fermilab</a>, collectively called ``Neutrinos at the Main Injector.'' The NuMI neutrino beamline target system converts an intense proton beam into a focused neutrino beam.</dd>
   <dt id = "nuwro">NuWro</dt>
   <dd>neutrino interaction generator.</dd>
   <dt id = "nvme">NVMe</dt>
@@ -764,7 +764,7 @@
 <h1 id="P">P</h1>
 <dl>
   <dt id = "p6">P6</dt>
-  <dd>framework used to plan and status the resource-loaded schedule of activities associated with the USA contributions to <a href="#lbnf">LBNF</a> and <a href="#dune">DUNE</a> .</dd>
+  <dd>framework used to plan and status the resource-loaded schedule of activities associated with the USA contributions to <a href="#lbnf">LBNF</a> and <a href="#dune">DUNE</a>.</dd>
   <dt id = "pab">PAB</dt>
   <dd>Proton Assembly Building<br>Home of several <a href="#lar">LAr</a> facilities at Fermilab.</dd>
   <dt id = "pandora">Pandora</dt>
@@ -786,7 +786,7 @@
   <dt id = "pdr">preliminary design review</dt>
   <dd>A project management device by which an early design is reviewed.</dd>
   <dt id = "pds">PD system</dt>
-  <dd>photon detection system<br>The detector subsystem sensitive to light produced in the <a href="#lar">LAr</a> .</dd>
+  <dd>photon detection system<br>The detector subsystem sensitive to light produced in the <a href="#lar">LAr</a>.</dd>
   <dt id = "pdsp">ProtoDUNE-SP</dt>
   <dd>The <a href="#sp">SP</a> <a href="#protodune">ProtoDUNE</a> detector at <a href="#cern">CERN</a>.</dd>
   <dt id = "pdsp2">ProtoDUNE-SP-2</dt>
@@ -838,11 +838,11 @@
   <dt id = "prr">production readiness review</dt>
   <dd>A project management device by which the production readiness is reviewed.</dd>
   <dt id = "ptb">PTB</dt>
-  <dd>power and timing backplane<br>Backplane used to connect the <a href="#wib">WIB</a>s and the <a href="#ptc">PTC</a>s on the <a href="#wiec">WIEC</a>. Also connects the <a href="#ce">CE</a> flange on the cryostat penetration.</dd>
+  <dd>power and timing backplane<br>Backplane used to connect the <a href="#wib">WIBs</a> and the <a href="#ptc">PTCs</a> on the <a href="#wiec">WIEC</a>. Also connects the <a href="#ce">CE</a> flange on the cryostat penetration.</dd>
   <dt id = "ptc">PTC</dt>
   <dd>power and timing card<br>Cards that provide further processing and distribution of the signals entering and exiting the <a href="#sp">SP</a> cryostat.</dd>
   <dt id = "ptp">PTP</dt>
-  <dd>p-terphenyl<br>A<a href="#wls">WLS</a> material.</dd>
+  <dd>p-terphenyl<br>A <a href="#wls">WLS</a> material.</dd>
   <dt id = "ptproto">PTP</dt>
   <dd>Precision Time Protocol<br>A networking protocol that allows synchronizing of clocks to within a few \si{\micro\second} of a time standard on a local network.</dd>
   <dt id = "pubsub">PUB/SUB</dt>
@@ -888,7 +888,7 @@
   <dt id = "rms">RMS</dt>
   <dd>root mean square<br>The square root of the arithmetic mean of the squares of a set of values, used as a measure of the typical magnitude of a set of numbers, regardless of their sign.</dd>
   <dt id = "ro">review office</dt>
-  <dd>An office within the <a href="#integoff">integration office</a> that organizes reviews .</dd>
+  <dd>An office within the <a href="#integoff">integration office</a> that organizes reviews.</dd>
   <dt id = "roc">ROC</dt>
   <dd>readout chamber<br>readout chamber for gaseous argon <a href="#tpc">TPC</a>.</dd>
   <dt id = "roi">ROI</dt>
@@ -963,7 +963,7 @@
   <dt id = "slac">SLAC</dt>
   <dd>SLAC National Accelerator Laboratory<br>US national laboratory in Menlo Park, CA.</dd>
   <dt id = "sls">SLS</dt>
-  <dd>spill location system<br>A system residing at the DUNE far detector site that provides information, possibly predictive, indicating periods of time when neutrinos are being produced by the \fnal Main Injector beam spills.</dd>
+  <dd>spill location system<br>A system residing at the DUNE far detector site that provides information, possibly predictive, indicating periods of time when neutrinos are being produced by the <a href="#fnal">Fermilab</a> Main Injector beam spills.</dd>
   <dt id = "sm">SM</dt>
   <dd>standard model<br>Refers to a theory describing the interaction of elementary particles.</dd>
   <dt id = "sma">SMA</dt>
@@ -981,7 +981,7 @@
   <dt id = "snews">SNEWS</dt>
   <dd>SuperNova Early Warning System<br>A global supernova neutrino burst trigger formed by a coincidence of <a href="#snb">SNB</a> triggers collected from participating experiments.</dd>
   <dt id = "sno">SNO</dt>
-  <dd>Sudbury Neutrino Observatory<br>The SudburyNeutrino Observatory was a detector built 6800 feet under ground, inINCO's Creighton mine near Sudbury, Ontario, Canada. SNO was aheavy-water Cherenkov detector designed to detect neutrinos producedby fusion reactions in the sun.</dd>
+  <dd>Sudbury Neutrino Observatory<br>The Sudbury Neutrino Observatory was a detector built 6800 feet under ground, in INCO's Creighton mine near Sudbury, Ontario, Canada. SNO was a heavy-water Cherenkov detector designed to detect neutrinos produced by fusion reactions in the sun.</dd>
   <dt id = "snowglobes">SNOwGLoBES</dt>
   <dd>SuperNovaObservatories with GLoBES<br>From the official description~\cite{snowglobes}:SNOwGLoBES is public software for computing interaction rates and distributions of observed quantities for <a href="#snb">SNB</a> neutrinos in common detector materials.</dd>
   <dt id = "snr">\mbox{S/N}</dt>
@@ -1024,7 +1024,7 @@
   <dt id = "tb">TB</dt>
   <dd>technical board<br>The DUNE organization responsible for evaluating technical decisions.</dd>
   <dt id = "tc">technical coordination</dt>
-  <dd>The DUNE organization responsible for overall integrationof the detector elements and successful execution of the detectorconstruction project; areas of responsibility includegeneral project oversight, systems engineering, <a href="#qa">QA</a>and safety.</dd>
+  <dd>The DUNE organization responsible for overall integrationof the detector elements and successful execution of the detectorconstruction project; areas of responsibility includegeneral project oversight, systems engineering, <a href="#qa">QA</a> and safety.</dd>
   <dt id = "tcm">TCM</dt>
   <dd>trigger command message<br>A message flowing down the trigger hierarchy from global to local context. Also see <a href="#tpm">TPM</a>.</dd>
   <dt id = "tco">TCO</dt>
@@ -1048,9 +1048,9 @@
   <dt id = "trigcandidate">trigger candidate</dt>
   <dd>Summary information derived from the full data stream and representing a contribution toward forming a <a href="#trigdecision">trigger decision</a>.</dd>
   <dt id = "trigcommand">trigger command</dt>
-  <dd>Information derived from one or more \glspl{trigcandidate} that directs elements of the <a href="#detmodule">detector module</a> to read out a portion of the data stream.</dd>
+  <dd>Information derived from one or more <a href="#trigcandidate">trigger candidates</a> that directs elements of the <a href="#detmodule">detector module</a> to read out a portion of the data stream.</dd>
   <dt id = "trigdecision">trigger decision</dt>
-  <dd>The process by which \glspl{trigcandidate} are converted into \glspl{trigcommand}.</dd>
+  <dd>The process by which <a href="#trigcandidate">trigger candidates</a> are converted into <a href="#trigcommand">trigger commands</a>.</dd>
   <dt id = "trignote">trigger notification</dt>
   <dd>Information provided by <a href="#mtl">MTL</a> to <a href="#etl">ETL</a> about <a href="#trigdecision">trigger decision</a> processing.</dd>
   <dt id = "trigprimitive">trigger primitive</dt>
@@ -1097,19 +1097,19 @@
   <dt id = "wbs">WBS</dt>
   <dd>work breakdown structure<br>An organizational project management tool by which the tasks to be performed are partitioned in a hierarchical manner.</dd>
   <dt id = "wct">WCT</dt>
-  <dd>Wire-Cell Toolkit<br>A software toolkit with data flow processing components for <a href="#lar">LAr</a>tpc noise and signal simulation, noise filtering, signal processing, and tomographic \threed ionization activity imaging.</dd>
+  <dd>Wire-Cell Toolkit<br>A software toolkit with data flow processing components for <a href="#lartpc">LArTPC</a> noise and signal simulation, noise filtering, signal processing, and tomographic \threed ionization activity imaging.</dd>
   <dt id = "wg">WG</dt>
   <dd>working group<br>A group of persons working together to achieve specified goals.</dd>
   <dt id = "wib">WIB</dt>
-  <dd>warm interface board<br>Digital electronics situated just outside the <a href="#sp">SP</a> cryostat that receives digital data from the \glspl{femb} over cold copper connections and sends it to the <a href="#rce">RCE</a> <a href="#fe">FE</a> readout hardware.</dd>
+  <dd>warm interface board<br>Digital electronics situated just outside the <a href="#sp">SP</a> cryostat that receives digital data from the <a href="#femb">FEMBs</a> over cold copper connections and sends it to the <a href="#rce">RCE</a> <a href="#fe">FE</a> readout hardware.</dd>
   <dt id = "wiec">WIEC</dt>
-  <dd>warm interface electronics crate<br>Crates mounted on the signal flanges that contain the \glspl{wib}.</dd>
+  <dd>warm interface electronics crate<br>Crates mounted on the signal flanges that contain the <a href="#wib">WIBs</a>.</dd>
   <dt id = "wimp">WIMP</dt>
   <dd>weakly-interacting massive particle<br>A hypothesized particle that may be a component of dark matter.</dd>
   <dt id = "wire board">wire board</dt>
-  <dd>At the head end of the APA in the <a href="#sp">SP</a> TPC, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires. They also provide the connection between the wires and the cold electronics.</dd>
+  <dd>At the head end of the APA in the <a href="#sp">SP</a> <a href="#tpc">TPC</a>, stacks of electronics boards referred to as ``wire boards'' are arrayed to anchor the wires. They also provide the connection between the wires and the cold electronics.</dd>
   <dt id = "wirecell">Wire-Cell</dt>
-  <dd>A tomographic automated \threed neutrino event reconstruction method for <a href="#lar">LAr</a>tpc{}s.</dd>
+  <dd>A tomographic automated \threed neutrino event reconstruction method for <a href="#lartpc">LArTPCs</a>.</dd>
   <dt id = "wlcg">WLCG</dt>
   <dd>Worldwide LHC Computing Grid<br>Worldwide LHCComputing Grid.</dd>
   <dt id = "wls">WLS</dt>
@@ -1121,7 +1121,7 @@
   <dt id = "wrgm">WR grandmaster</dt>
   <dd>White Rabbit grandmaster.</dd>
   <dt id = "wrmch">WR-MCH</dt>
-  <dd>White Rabbit \gls{utca} Carrier Hub<br>A card mounted in <a href="#utca">$\mu$TCA</a> crate that recieves time syncronization information and trigger data packets over <a href="#wr">WR</a> network and disributes them to the <a href="#amc">AMC</a> over <a href="#utca">$\mu$TCA</a> backplane.</dd>
+  <dd>White Rabbit <a href="#utca">$\mu$TCA</a> Carrier Hub<br>A card mounted in <a href="#utca">$\mu$TCA</a> crate that recieves time syncronization information and trigger data packets over <a href="#wr">WR</a> network and disributes them to the <a href="#amc">AMC</a> over <a href="#utca">$\mu$TCA</a> backplane.</dd>
   <dt id = "wrtsn">WR-TSN</dt>
   <dd>White Rabbit TimeStamping Node<br>A unit on the <a href="#wr">WR</a> network that timestamps the trigger signals and sends out trigger data packets to <a href="#wrmch">WR-MCH</a>.</dd>
 </dl>
@@ -1145,7 +1145,7 @@
   <dt id = "2p2h">2p2h</dt>
   <dd>two particle, two hole.</dd>
   <dt id = "35t">35 ton prototype</dt>
-  <dd>A prototype cryostat and <a href="#sp">SP</a> detector built at \fnal before the <a href="#protodune">ProtoDUNE</a> detectors.</dd>
+  <dd>A prototype cryostat and <a href="#sp">SP</a> detector built at <a href="#fnal">Fermilab</a> before the <a href="#protodune">ProtoDUNE</a> detectors.</dd>
   <dt id = "3dst">3DST</dt>
   <dd>3D scintillator tracker<br>The core part of the \threed projection scintillator tracker spectrometer in the near detector conceptual design.</dd>
   <dt id = "3dsts">3DST-S</dt>
