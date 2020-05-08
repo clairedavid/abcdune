@@ -811,8 +811,8 @@
         "type": "abbrev"
     },
     "diskbuffer": {
-        "defHTML": "A secondary \\dshort{daq} buffer holds a small subset of the full rate as selected by a <a href=\"#trigcommand\">trigger command</a>. This buffer also marks the interface with the DUNE Offline.",
-        "defLaTeX": "A secondary  \\dshort{daq} buffer holds a small subset of the full rate as  selected by a \\gls{trigcommand}.  This buffer also marks the interface with the DUNE Offline",
+        "defHTML": "A secondary <a href=\"#daq\">DAQ</a> buffer holds a small subset of the full rate as selected by a <a href=\"#trigcommand\">trigger command</a>. This buffer also marks the interface with the DUNE Offline.",
+        "defLaTeX": "A secondary  \\gls{daq} buffer holds a small subset of the full rate as  selected by a \\gls{trigcommand}.  This buffer also marks the interface with the DUNE Offline",
         "term": "secondary DAQ buffer",
         "type": "word"
     },
@@ -2961,8 +2961,8 @@
     },
     "snowglobes": {
         "abbrev": "SNOwGLoBES",
-        "defHTML": "From the official description~\\cite{snowglobes}:SNOwGLoBES is public software for computing interaction rates and distributions of observed quantities for <a href=\"#snb\">SNB</a> neutrinos in common detector materials.",
-        "defLaTeX": "From the official description~\\cite{snowglobes}:SNOwGLoBES is public software for computing interaction rates and distributions of observed quantities for \\gls{snb} neutrinos in common detector materials",
+        "defHTML": "From the official description: SNOwGLoBES is public software for computing interaction rates and distributions of observed quantities for <a href=\"#snb\">SNB</a> neutrinos in common detector materials.",
+        "defLaTeX": "From the official description: SNOwGLoBES is public software for computing interaction rates and distributions of observed quantities for \\gls{snb} neutrinos in common detector materials",
         "term": "SuperNovaObservatories with GLoBES",
         "type": "abbrev"
     },

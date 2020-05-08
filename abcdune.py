@@ -10,13 +10,9 @@
 # Author:        Claire David    cdavid@fnal.gov
 # Date created:  February 24, 2020
 # Status:        dev
-#
-#                TODO: create defHTML
-#                      1. convert \\gls{___} to HTML links
-#                      2. find LaTeX2HTML lib 
 #          
 # ##########################################################
-
+import os
 import sys
 import re
 import argparse
@@ -82,18 +78,51 @@ def latex_into_html(defLaTeX, DUNEdict):
 def main():
 
     parser = argparse.ArgumentParser(description='Store all DUNE words and acronyms from the LaTeX glossary into a JSON file and HTML index.')
-    parser.add_argument('infile', nargs='?', type=argparse.FileType('r'), help='Name of glossary tex file.' )
-
+    #parser.add_argument('infile', nargs='?', type=argparse.FileType('r'), help='Name of glossary tex file.' )
+    #parser.add_argument('-i', type=argparse.FileType('r'), help='Name of glossary tex file.', dest="src")
+    #parser.add_argument('-o', type=argparse.FileType('w'), help='Name of glossary html file.', dest="dest")
+    parser.add_argument('-i', help='Name of glossary tex file.', dest="src")
+    parser.add_argument('-o', help='Name of glossary html file.', dest="dest")
     args = parser.parse_args()
+     
+    #filename = args.infile
+    print(args.src)
+    print(args.dest)
     
-    if args.infile is not None:
-        filename = args.infile
-    else:
-        print("No argument given, opening default file 'glossary.tex'")
-        filename = 'glossary.tex'
+     
+    #else:
+    #    print("No argument given, opening default file 'glossary.tex'")
+    #    filename = 'glossary.tex'
 
-    with open(filename, "r") as f:
+    """ 
+    try: 
+        with open(args.src, 'r') as f:
+            content = f.readlines()
+    finally: f.close()
+    """
+    
+    f = open(args.src)
+    try: 
+        #f = open(args.src, 'r')
         content = f.readlines()
+    except: pass
+    finally: f.close()
+    
+
+    """
+    try:
+        with open(args.infile, 'r') as f:
+            content = f.readlines()
+    except (IOError, ValueError, EOFError) as e:
+        print(e)
+    except:
+        print("Unknown error, can not open source file " + args.infile)
+        exit(2)
+    finally:
+        f.close()
+    
+    print("DEBUG file open")
+    """
 
     # STEP 1: the escaped LaTeX percent is replaced with its HTML code
     content_percntHTML = [ replace_percent_in_html_code(line) for line in content]
@@ -106,8 +135,6 @@ def main():
     one_line_glossary = one_line_glossary.replace("\n","")
     one_line_glossary = one_line_glossary.replace("} {", "}{")
     list_glossary = one_line_glossary.split("\\new")
-
-
 
     # STEP 4: storing all DUNE words in dictionary into format:
     #__________________________________________________________________
@@ -238,14 +265,17 @@ def main():
     content += '<br>\n</div>\n</body>\n</html>'
 
     #===== Export in HTML index =====
+    f_html = open(args.dest, 'w')
+    f_html.write(content)
+    print("HTML file created in:  " + args.dest )
+
+    """
     f_html = "./docs/index.html"
     with open(f_html,'w') as f:
         f.write(content)
     print("HTML file created in:  " + f_html)
-    
-    print("\nABC DUNE says bye. ZzzZzzZ")
+    """
 
-        
 
 if __name__ == '__main__':
     
