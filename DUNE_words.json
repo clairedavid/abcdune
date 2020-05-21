@@ -1390,8 +1390,8 @@
     },
     "hepa": {
         "abbrev": "HEPA",
-        "defHTML": "The High Efficiency Particulate Air filters are a type of air filter that remove \\num{99.97}&percnt; of particles that have a size greater han or equal to \\SI{0.3}{$\\mu$m}.",
-        "defLaTeX": "The High Efficiency Particulate Air filters are a type of air filter that remove \\num{99.97}&percnt; of particles that have a size greater han or equal to \\SI{0.3}{$\\mu$m}",
+        "defHTML": "The High Efficiency Particulate Air filters are a type of air filter that remove \\num{99.97}&percnt; of particles that have a size greater than or equal to \\SI{0.3}{$\\mu$m}.",
+        "defLaTeX": "The High Efficiency Particulate Air filters are a type of air filter that remove \\num{99.97}&percnt; of particles that have a size greater than or equal to \\SI{0.3}{$\\mu$m}",
         "term": "High Efficiency Particulate Air",
         "type": "abbrev"
     },
@@ -1921,14 +1921,14 @@
         "type": "abbrev"
     },
     "microboone": {
-        "defHTML": "The <a href=\"#lartpc\">LArTPC</a>-based \\microboone neutrino oscillation experiment at <a href=\"#fnal\">Fermilab</a>.",
-        "defLaTeX": "The \\gls{lartpc}-based \\microboone neutrino oscillation experiment at  \\gls{fnal}",
+        "defHTML": "The <a href=\"#lartpc\">LArTPC</a>-based <a href=\"#microboone\">MicroBooNE</a> neutrino oscillation experiment at <a href=\"#fnal\">Fermilab</a>.",
+        "defLaTeX": "The \\gls{lartpc}-based \\gls{microboone} neutrino oscillation experiment at  \\gls{fnal}",
         "term": "MicroBooNE",
         "type": "word"
     },
     "minerva": {
-        "defHTML": "The \\minerva neutrino cross sections experiment at <a href=\"#fnal\">Fermilab</a>.",
-        "defLaTeX": "The \\minerva neutrino cross sections experiment at  \\gls{fnal}",
+        "defHTML": "The <a href=\"#minerva\">MINERvA</a> neutrino cross sections experiment at <a href=\"#fnal\">Fermilab</a>.",
+        "defLaTeX": "The \\gls{minerva} neutrino cross sections experiment at  \\gls{fnal}",
         "term": "MINERvA",
         "type": "word"
     },
