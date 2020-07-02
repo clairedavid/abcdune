@@ -11,7 +11,7 @@ Demo [here](https://clairedavid.github.io/abcdune/).
 python3 abcdune.py -i glossary.tex -d defs.tex -o docs/index.html
 ```
 - The script takes as arguments the LaTeX glossary and defition (custom commands) filenames. 
-- Tested with [glossary.tex](https://github.com/DUNE/dune-tdr/blob/master/common/glossary.tex) (last edit: May 7, 2020)
+<!--- Tested with [glossary.tex](https://github.com/DUNE/dune-tdr/blob/master/common/glossary.tex) (last edit: May 7, 2020) ---> 
 
 ## Status
 - Done with Python3.
