@@ -1039,6 +1039,13 @@
         "term": "European Strategy for Particle Physics",
         "type": "abbrev"
     },
+    "etf": {
+        "abbrev": "ETF",
+        "defHTML": "<a href=\"#wlcg\">WLCG</a> testing middleware running grid jobs that actively test distributed sites services and capabilities, and report back to monitoring services.",
+        "defLaTeX": "\\gls{wlcg} testing middleware running grid jobs that actively test distributed sites services and capabilities, and report back to monitoring services",
+        "term": "Experiment Test Framework",
+        "type": "abbrev"
+    },
     "etl": {
         "abbrev": "ETL",
         "defHTML": "Trigger processing that consumes <a href=\"#detmodule\">detector module</a> level <a href=\"#trignote\">trigger notification</a> information and other global sources of trigger input and emits <a href=\"#trigcommand\">trigger command</a> information back to the <a href=\"#mtl\">MTLs</a>.",
@@ -1497,8 +1504,8 @@
         "type": "word"
     },
     "ifbeam": {
-        "defHTML": "Database that stores beamline informationindexed by timestamp.",
-        "defLaTeX": "Database that stores beamline informationindexed by timestamp",
+        "defHTML": "Database that stores beamline information indexed by timestamp.",
+        "defLaTeX": "Database that stores beamline information indexed by timestamp",
         "term": "IFbeam",
         "type": "word"
     },
@@ -1873,9 +1880,9 @@
     },
     "marley": {
         "abbrev": "MARLEY",
-        "defHTML": "Developed at UC Davis, MARLEY is the first realistic model ofneutrino electron interactions on argon for enegies less than \\SI{50}{MeV}. This includes the energy range important for <a href=\"#snb\">SNB</a>neutrinos and also solar 8--boron neutrinos.",
-        "defLaTeX": "Developed at UC Davis, MARLEY is the first realistic model ofneutrino electron interactions on argon for enegies less than \\SI{50}{MeV}. This includes the energy range important for \\gls{snb}neutrinos and also solar 8--boron neutrinos",
-        "term": "Model of Argon Reaction Low EnergyYields",
+        "defHTML": "Developed at UC Davis, MARLEY is the first realistic model of neutrino electron interactions on argon for enegies less than \\SI{50}{MeV}. This includes the energy range important for <a href=\"#snb\">SNB</a> neutrinos and also solar 8--boron neutrinos.",
+        "defLaTeX": "Developed at UC Davis, MARLEY is the first realistic model of neutrino electron interactions on argon for enegies less than \\SI{50}{MeV}. This includes the energy range important for \\gls{snb} neutrinos and also solar 8--boron neutrinos",
+        "term": "Model of Argon Reaction Low Energy Yields",
         "type": "abbrev"
     },
     "mc": {
@@ -1921,14 +1928,14 @@
         "type": "abbrev"
     },
     "microboone": {
-        "defHTML": "The <a href=\"#lartpc\">LArTPC</a>-based <a href=\"#microboone\">MicroBooNE</a> neutrino oscillation experiment at <a href=\"#fnal\">Fermilab</a>.",
-        "defLaTeX": "The \\gls{lartpc}-based \\gls{microboone} neutrino oscillation experiment at  \\gls{fnal}",
+        "defHTML": "A <a href=\"#lartpc\">LArTPC</a> neutrino oscillation experiment at <a href=\"#fnal\">Fermilab</a>.",
+        "defLaTeX": "A \\gls{lartpc} neutrino oscillation experiment at \\gls{fnal}",
         "term": "MicroBooNE",
         "type": "word"
     },
     "minerva": {
-        "defHTML": "The <a href=\"#minerva\">MINERvA</a> neutrino cross sections experiment at <a href=\"#fnal\">Fermilab</a>.",
-        "defLaTeX": "The \\gls{minerva} neutrino cross sections experiment at  \\gls{fnal}",
+        "defHTML": "Neutrino cross sections experiment at <a href=\"#fnal\">Fermilab</a>.",
+        "defLaTeX": "Neutrino cross sections experiment at \\gls{fnal}",
         "term": "MINERvA",
         "type": "word"
     },
@@ -3025,8 +3032,8 @@
         "type": "abbrev"
     },
     "ssp": {
-        "defHTML": "SiPM signal processor.",
-        "defLaTeX": "SiPM signal processor",
+        "defHTML": "<a href=\"#sipm\">SiPM</a> signal processor.",
+        "defLaTeX": "\\gls{sipm} signal processor",
         "term": "SSP",
         "type": "word"
     },

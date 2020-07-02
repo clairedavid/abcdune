@@ -41,7 +41,7 @@ def remove_comment(line):
 
 def gls_to_html_link(defString, gls_tag_type, DUNEdict):
 
-    # defString may contain gls{} or glspl{} tags to replace
+    # the defString may contain gls{} or glspl{} tags to be replaced
     # by HTML <a></a> tags
 
     isPlural = True if gls_tag_type is "glspl" else False
@@ -68,10 +68,14 @@ def gls_to_html_link(defString, gls_tag_type, DUNEdict):
 
 def latex_into_html(defLaTeX, DUNEdict):
 
-    # Manually replace \gls{} and \glspl{} tags with HTML <a></a> link tags
+    # Replace \gls{} and \glspl{} tags with HTML <a></a> link tags
     stringHTML = gls_to_html_link(defLaTeX, "gls", DUNEdict)
     stringHTML = gls_to_html_link(stringHTML, "glspl", DUNEdict)
     stringHTML = stringHTML.replace("  ", " ")
+    
+    # Replace the newcommand{} from defs.tex by the proper latex
+
+    # pypandoc to resolve all remaining latex-to-html issues:
     
     return stringHTML.rstrip(' ') + "." # adding period at the end of the HTML definition 
 
@@ -81,12 +85,14 @@ def main():
     #parser.add_argument('infile', nargs='?', type=argparse.FileType('r'), help='Name of glossary tex file.' )
     #parser.add_argument('-i', type=argparse.FileType('r'), help='Name of glossary tex file.', dest="src")
     #parser.add_argument('-o', type=argparse.FileType('w'), help='Name of glossary html file.', dest="dest")
-    parser.add_argument('-i', help='Name of glossary tex file.', dest="src")
-    parser.add_argument('-o', help='Name of glossary html file.', dest="dest")
+    parser.add_argument('-i', help='Path to glossary tex file.',  dest="src")
+    parser.add_argument('-d', help='Path to definition tex file.',dest="defs")
+    parser.add_argument('-o', help='Path to glossary html file.', dest="dest")
     args = parser.parse_args()
      
     #filename = args.infile
     print(args.src)
+
     print(args.dest)
     
      
@@ -100,29 +106,64 @@ def main():
             content = f.readlines()
     finally: f.close()
     """
-    
-    f = open(args.src)
-    try: 
-        #f = open(args.src, 'r')
-        content = f.readlines()
+    #------------------------
+    # Opening defs.tex
+    #------------------------
+    f = open(args.defs)
+    try:
+        defs_content = f.readlines()
     except: pass
     finally: f.close()
-    
 
-    """
-    try:
-        with open(args.infile, 'r') as f:
-            content = f.readlines()
-    except (IOError, ValueError, EOFError) as e:
-        print(e)
-    except:
-        print("Unknown error, can not open source file " + args.infile)
-        exit(2)
-    finally:
-        f.close()
+    # STEP 1: the escaped LaTeX percent is replaced with its HTML code
+    defs_content_percntHTML = [ replace_percent_in_html_code(line) for line in defs_content if "\\newcommand{" in line]
+
+    # STEP 2: now removing LaTeX comments
+    defs_no_comment = [ remove_comment(line) for line in defs_content_percntHTML ]
+
+    # STEP 3: fill list of \newcommand items:
+    one_line_defs = "".join(defs_no_comment)
+    one_line_defs = one_line_defs.replace("\n","")
+    list_defs     = one_line_defs.split("\\newcommand{")
     
-    print("DEBUG file open")
-    """
+    # STEP 4: storing \newcommands in dictionary
+    # Example 1:
+    # \newcommand{\threed}{3D\xspace}
+    # defs_dict["\threed"] = { N_args: 0, def_latex: "3D\xspace" }
+    # Example 2:
+    # \newcommand{\bigo}[1]{\ensuremath{\mathcal{O}(#1)}}
+    # defs_dict["\bigo"] = { N_args: 1 , def_latex: "\ensuremath{\mathcal{O}(#1)}" }
+
+    defs_dict = {} 
+    for line in list_defs:
+        if "}[" in line:
+            def_command , sep , Nargs_and_def_latex = line.partition("}[")
+            N_args_str , sep , def_latex = Nargs_and_def_latex.partition("]{")
+            N_args = int(N_args_str)
+            
+        else:
+            def_command , sep, def_latex  = line.partition("}{")
+            N_args = 0
+
+        def_latex = def_latex[:-1] if def_latex.endswith('}') else def_latex
+        def_latex = def_latex.replace('\\xspace', ' ')
+
+        defs_dict[def_command] = { "N_args": N_args, "def_latex": def_latex }
+
+    for key , info in defs_dict.items():
+        print("%s\t\t%d\t\t%s"%(key,info["N_args"], info["def_latex"]))
+
+    print(len(defs_dict))
+    sys.exit(2)
+
+    #------------------------
+    # Opening glossary.tex
+    #------------------------
+    f = open(args.src)
+    try: 
+        content = f.readlines()
+    except: pass
+    finally: f.close()    
 
     # STEP 1: the escaped LaTeX percent is replaced with its HTML code
     content_percntHTML = [ replace_percent_in_html_code(line) for line in content]
@@ -195,13 +236,14 @@ def main():
     #===== Description in HTML =====
     # Need to have loaded full dictionnary to convert
     # the referenced acronyms into html links
+
     for key , info in DUNEdict.items():
 
         defHTML = latex_into_html(info["defLaTeX"], DUNEdict)
         info["defHTML"] = defHTML
 
     #===== Export in JSON file =====
-    # (could later read only read from JSON)
+    
     jsonfile = 'DUNE_words.json'
     with open(jsonfile, 'w') as fp:
         json.dump(DUNEdict, fp, indent=4, sort_keys=True)
