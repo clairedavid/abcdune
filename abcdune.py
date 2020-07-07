@@ -39,10 +39,9 @@ def remove_comment(line):
         line_with_no_comment = line[:index_percentage]
         return(line_with_no_comment.rstrip())
 
-def gls_to_html_link(defString, gls_tag_type, DUNEdict):
+def gls_to_html_link(defString, gls_tag_type, dunewd_dict):
 
-    # the defString may contain gls{} or glspl{} tags to be replaced
-    # by HTML <a></a> tags
+    # replace possible gls{},glspl{} in defString by <a></a> html tags
 
     isPlural = True if gls_tag_type is "glspl" else False
 
@@ -57,7 +56,7 @@ def gls_to_html_link(defString, gls_tag_type, DUNEdict):
         # "term" entry in dictionary if type 'word'
         # "abbrev" entry (acronym) if type 'abbrev'
 
-        link_text = DUNEdict[glsTag]["term"] if DUNEdict[glsTag]["type"] is "word" else DUNEdict[glsTag]["abbrev"]
+        link_text = dunewd_dict[glsTag]["term"] if dunewd_dict[glsTag]["type"] is "word" else dunewd_dict[glsTag]["abbrev"]
         if isPlural:
             link_text = link_text + "s"
 
@@ -66,14 +65,20 @@ def gls_to_html_link(defString, gls_tag_type, DUNEdict):
     return defString 
 
 
-def latex_into_html(defLaTeX, DUNEdict):
+def latex_into_html(defLaTeX, dunewd_dict, defs_dict):
+
+    # Replace the newcommand{} from defs.tex by the proper latex
+    for def_key, def_info in defs_dict.items():
+        if def_key in defLaTeX:
+            print("Found def %s \\ in \n %s \n\n"%(def_key[1:], defLaTeX))
+
 
     # Replace \gls{} and \glspl{} tags with HTML <a></a> link tags
-    stringHTML = gls_to_html_link(defLaTeX, "gls", DUNEdict)
-    stringHTML = gls_to_html_link(stringHTML, "glspl", DUNEdict)
+    stringHTML = gls_to_html_link(defLaTeX, "gls", dunewd_dict)
+    stringHTML = gls_to_html_link(stringHTML, "glspl", dunewd_dict)
     stringHTML = stringHTML.replace("  ", " ")
     
-    # Replace the newcommand{} from defs.tex by the proper latex
+
 
     # pypandoc to resolve all remaining latex-to-html issues:
     
@@ -82,30 +87,11 @@ def latex_into_html(defLaTeX, DUNEdict):
 def main():
 
     parser = argparse.ArgumentParser(description='Store all DUNE words and acronyms from the LaTeX glossary into a JSON file and HTML index.')
-    #parser.add_argument('infile', nargs='?', type=argparse.FileType('r'), help='Name of glossary tex file.' )
-    #parser.add_argument('-i', type=argparse.FileType('r'), help='Name of glossary tex file.', dest="src")
-    #parser.add_argument('-o', type=argparse.FileType('w'), help='Name of glossary html file.', dest="dest")
     parser.add_argument('-i', help='Path to glossary tex file.',  dest="src")
     parser.add_argument('-d', help='Path to definition tex file.',dest="defs")
     parser.add_argument('-o', help='Path to glossary html file.', dest="dest")
     args = parser.parse_args()
      
-    #filename = args.infile
-    print(args.src)
-
-    print(args.dest)
-    
-     
-    #else:
-    #    print("No argument given, opening default file 'glossary.tex'")
-    #    filename = 'glossary.tex'
-
-    """ 
-    try: 
-        with open(args.src, 'r') as f:
-            content = f.readlines()
-    finally: f.close()
-    """
     #------------------------
     # Opening defs.tex
     #------------------------
@@ -126,13 +112,11 @@ def main():
     one_line_defs = one_line_defs.replace("\n","")
     list_defs     = one_line_defs.split("\\newcommand{")
     
-    # STEP 4: storing \newcommands in dictionary
-    # Example 1:
-    # \newcommand{\threed}{3D\xspace}
-    # defs_dict["\threed"] = { N_args: 0, def_latex: "3D\xspace" }
-    # Example 2:
-    # \newcommand{\bigo}[1]{\ensuremath{\mathcal{O}(#1)}}
-    # defs_dict["\bigo"] = { N_args: 1 , def_latex: "\ensuremath{\mathcal{O}(#1)}" }
+    # STEP 4: storing \newcommand in dictionary
+    # Example 1:      \newcommand{\threed}{3D\xspace}
+    #                 defs_dict["\threed"] = { N_args: 0, def_latex: "3D\xspace" }
+    # Example 2:      \newcommand{\bigo}[1]{\ensuremath{\mathcal{O}(#1)}}
+    #                 defs_dict["\bigo"] = { N_args: 1 , def_latex: "\ensuremath{\mathcal{O}(#1)}" }
 
     defs_dict = {} 
     for line in list_defs:
@@ -150,11 +134,8 @@ def main():
 
         defs_dict[def_command] = { "N_args": N_args, "def_latex": def_latex }
 
-    for key , info in defs_dict.items():
-        print("%s\t\t%d\t\t%s"%(key,info["N_args"], info["def_latex"]))
-
-    print(len(defs_dict))
-    sys.exit(2)
+    #for key , info in defs_dict.items():
+    #    print("%s\t\t%d\t\t%s"%(key,info["N_args"], info["def_latex"]))
 
     #------------------------
     # Opening glossary.tex
@@ -195,7 +176,7 @@ def main():
     # in custom LaTeX commands inside the description
     # Parsing thus using partition("}{")
 
-    DUNEdict = {}
+    dunewd_dict = {}
 
     for line in list_glossary:
 
@@ -207,7 +188,7 @@ def main():
             term, sep, description = info.partition("}{") 
             description            = description[:-1] if description.endswith('}') else description
             defLaTeX               = description
-            DUNEdict[key]          = {"type": "word", "term": term, "defLaTeX": defLaTeX}
+            dunewd_dict[key]       = {"type": "word", "term": term, "defLaTeX": defLaTeX}
 
         elif line.startswith( 'duneabbrev{' ):
     
@@ -217,7 +198,7 @@ def main():
             abbrev, s, info2       = info1.partition("}{")
             term ,  s, description = info2.partition("}{")
             defLaTeX               = description[:-1] if description.endswith('}') else description
-            DUNEdict[key]          = {"type": "abbrev", "abbrev": abbrev, "term": term, "defLaTeX": defLaTeX}
+            dunewd_dict[key]       = {"type": "abbrev", "abbrev": abbrev, "term": term, "defLaTeX": defLaTeX}
 
         elif line.startswith( 'duneabbrevs{' ):
     
@@ -228,25 +209,26 @@ def main():
             term ,  s, info3       = info2.partition("}{")
             terms,  s, description = info3.partition("}{")
             defLaTeX               = description[:-1] if description.endswith('}') else description
-            DUNEdict[key]          = {"type": "abbrevs", "abbrev": abbrev, "term": term, "terms": terms, "defLaTeX": defLaTeX}
+            dunewd_dict[key]       = {"type": "abbrevs", "abbrev": abbrev, "term": term, "terms": terms, "defLaTeX": defLaTeX}
     
         else:
             continue 
 
     #===== Description in HTML =====
-    # Need to have loaded full dictionnary to convert
-    # the referenced acronyms into html links
+    # Need to have all dunewords and defs before converting to html
+    # ===> to replace definitions into latex
+    # ===> to referenced acronyms into html links
 
-    for key , info in DUNEdict.items():
+    for key , info in dunewd_dict.items():
 
-        defHTML = latex_into_html(info["defLaTeX"], DUNEdict)
+        defHTML = latex_into_html(info["defLaTeX"], dunewd_dict, defs_dict)
         info["defHTML"] = defHTML
 
     #===== Export in JSON file =====
     
     jsonfile = 'DUNE_words.json'
     with open(jsonfile, 'w') as fp:
-        json.dump(DUNEdict, fp, indent=4, sort_keys=True)
+        json.dump(dunewd_dict, fp, indent=4, sort_keys=True)
     print("DUNE words exported in JSON file " + jsonfile)
 
     #===== Write HTML content =====
@@ -286,12 +268,12 @@ def main():
 
         content += '<h1 id="'+ letter +'">'+ letter +'</h1>\n<dl>\n'
         
-        for key, info in sorted(DUNEdict.items()):
+        for key, info in sorted(dunewd_dict.items()):
 
             if key.startswith(letter.lower()) or (letter is "&num;" and key[0].isdigit()):
 
                 # Format the term if referenced word (gls)
-                termHTML = gls_to_html_link(info["term"], "gls", DUNEdict)
+                termHTML = gls_to_html_link(info["term"], "gls", dunewd_dict)
 
                 if info["type"] is not "word": # cases abbrev and abbrevs
 

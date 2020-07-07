@@ -1096,8 +1096,8 @@
     },
     "fd": {
         "abbrev": "FD",
-        "defHTML": "The \\SI{70}{kt} total (\\fdfiducialmass fiducial) mass <a href=\"#lartpc\">LArTPC</a> DUNE detector, composed of four <a href=\"#lar\">LAr</a>mass total (\\nominalmodsize fiducial) mass modules, to be installed at the far site at <a href=\"#surf\">SURF</a> in Lead, SD, USA.",
-        "defLaTeX": "The \\SI{70}{kt} total (\\fdfiducialmass fiducial) mass \\gls{lartpc} DUNE detector, composed of four \\gls{lar}mass total (\\nominalmodsize fiducial) mass modules,  to be installed at the far site at \\gls{surf} in  Lead, SD, USA",
+        "defHTML": "The \\SI{70}{kt} total (\\fdfiducialmass fiducial) mass <a href=\"#lartpc\">LArTPC</a> DUNE detector, composed of four \\larmass total (\\nominalmodsize fiducial) mass modules, to be installed at the far site at <a href=\"#surf\">SURF</a> in Lead, SD, USA.",
+        "defLaTeX": "The \\SI{70}{kt} total (\\fdfiducialmass fiducial) mass \\gls{lartpc} DUNE detector, composed of four \\larmass total (\\nominalmodsize fiducial) mass modules,  to be installed at the far site at \\gls{surf} in  Lead, SD, USA",
         "term": "far detector",
         "type": "abbrev"
     },
