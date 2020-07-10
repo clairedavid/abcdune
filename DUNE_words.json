@@ -13,14 +13,14 @@
     },
     "3dst": {
         "abbrev": "3DST",
-        "defHTML": "The core part of the \\threed projection scintillator tracker spectrometer in the near detector conceptual design.",
+        "defHTML": "The core part of the 3D projection scintillator tracker spectrometer in the near detector conceptual design.",
         "defLaTeX": "The core part of the \\threed projection scintillator tracker spectrometer in the near detector conceptual design",
         "term": "3D scintillator tracker",
         "type": "abbrev"
     },
     "3dsts": {
         "abbrev": "3DST-S",
-        "defHTML": "The \\threed projection scintillator tracker spectrometer in the near detector conceptual design.",
+        "defHTML": "The 3D projection scintillator tracker spectrometer in the near detector conceptual design.",
         "defLaTeX": "The \\threed projection scintillator tracker spectrometer  in the near detector conceptual design",
         "term": "3D scintillator tracker spectrometer",
         "type": "abbrev"
@@ -531,7 +531,7 @@
     },
     "crp": {
         "abbrev": "CRP",
-        "defHTML": "In the <a href=\"#dp\">DP</a> technology, a collection of electrodes in a planar arrangement placed at a particular voltage relative to some applied \\efield such that drifting electrons may be collected and their number and time may be measured.",
+        "defHTML": "In the <a href=\"#dp\">DP</a> technology, a collection of electrodes in a planar arrangement placed at a particular voltage relative to some applied E field such that drifting electrons may be collected and their number and time may be measured.",
         "defLaTeX": "In the \\gls{dp} technology, a  collection of  electrodes in a planar arrangement placed at a particular voltage  relative to some applied \\efield such that drifting electrons  may be collected and their number and time may be measured",
         "term": "charge-readout plane",
         "type": "abbrev"
@@ -1089,14 +1089,14 @@
     },
     "fc": {
         "abbrev": "FC",
-        "defHTML": "The component of a <a href=\"#lartpc\">LArTPC</a> that contains and shapes the applied \\efield.",
+        "defHTML": "The component of a <a href=\"#lartpc\">LArTPC</a> that contains and shapes the applied E field.",
         "defLaTeX": "The component of a \\gls{lartpc} that contains and shapes the applied \\efield",
         "term": "field cage",
         "type": "abbrev"
     },
     "fd": {
         "abbrev": "FD",
-        "defHTML": "The \\SI{70}{kt} total (\\fdfiducialmass fiducial) mass <a href=\"#lartpc\">LArTPC</a> DUNE detector, composed of four \\larmass total (\\nominalmodsize fiducial) mass modules, to be installed at the far site at <a href=\"#surf\">SURF</a> in Lead, SD, USA.",
+        "defHTML": "The \\SI{70}{kt} total (\\SI{40}{\\kt} fiducial) mass <a href=\"#lartpc\">LArTPC</a> DUNE detector, composed of four LAr mass total (\\SI{10}{kt} fiducial) mass modules, to be installed at the far site at <a href=\"#surf\">SURF</a> in Lead, SD, USA.",
         "defLaTeX": "The \\SI{70}{kt} total (\\fdfiducialmass fiducial) mass \\gls{lartpc} DUNE detector, composed of four \\larmass total (\\nominalmodsize fiducial) mass modules,  to be installed at the far site at \\gls{surf} in  Lead, SD, USA",
         "term": "far detector",
         "type": "abbrev"
@@ -1162,7 +1162,7 @@
         "type": "word"
     },
     "fhc": {
-        "defHTML": "forward horn current ($\\numu$ mode).",
+        "defHTML": "forward horn current ($\\ensuremath{\\nu_\\mu} $ mode).",
         "defLaTeX": "forward horn current ($\\numu$ mode)",
         "term": "FHC",
         "type": "word"
@@ -2406,7 +2406,7 @@
     },
     "pma": {
         "abbrev": "PMA",
-        "defHTML": "A reconstruction algorithm that combines \\twod reconstructed objects to form a \\threed representation.",
+        "defHTML": "A reconstruction algorithm that combines 2D reconstructed objects to form a 3D representation.",
         "defLaTeX": "A reconstruction algorithm that combines \\twod reconstructed objects to form a \\threed representation",
         "term": "Projection Matching Algorithm",
         "type": "abbrev"
@@ -2683,7 +2683,7 @@
     },
     "rp": {
         "abbrev": "RP",
-        "defHTML": "Resistive panels form the constant potential surfaces for a <a href=\"#spmod\">SP module</a> <a href=\"#cpa\">CPA</a>; they are composed of a thin layer of carbon-impregnated Kapton and laminated to both sides of a \\frfour sheet.",
+        "defHTML": "Resistive panels form the constant potential surfaces for a <a href=\"#spmod\">SP module</a> <a href=\"#cpa\">CPA</a>; they are composed of a thin layer of carbon-impregnated Kapton and laminated to both sides of a FR-4 sheet.",
         "defLaTeX": "Resistive panels form the constant potential surfaces for a \\gls{spmod} \\gls{cpa}; they are composed of a thin layer of carbon-impregnated Kapton and laminated to both sides of a \\frfour sheet",
         "term": "resistive panel",
         "type": "abbrev"
@@ -2769,7 +2769,7 @@
     },
     "sbn": {
         "abbrev": "SBN",
-        "defHTML": "A <a href=\"#fnal\">Fermilab</a> program consisting of three collaborations, <a href=\"#microboone\">MicroBooNE</a>, <a href=\"#sbnd\">SBND</a>, and <a href=\"#icarus\">ICARUS</a>, to perform sensitive searches for $\\nue$ appearance and $\\numu$ disappearance in the Booster Neutrino Beam.",
+        "defHTML": "A <a href=\"#fnal\">Fermilab</a> program consisting of three collaborations, <a href=\"#microboone\">MicroBooNE</a>, <a href=\"#sbnd\">SBND</a>, and <a href=\"#icarus\">ICARUS</a>, to perform sensitive searches for $\\ensuremath{\\nu_e} $ appearance and $\\ensuremath{\\nu_\\mu} $ disappearance in the Booster Neutrino Beam.",
         "defLaTeX": "A \\gls{fnal} program consisting of three collaborations, \\gls{microboone}, \\gls{sbnd}, and \\gls{icarus}, to perform sensitive searches for $\\nue$ appearance and $\\numu$ disappearance in the Booster Neutrino Beam",
         "term": "Short-Baseline Neutrino",
         "type": "abbrev"
@@ -2864,7 +2864,7 @@
     },
     "sipm": {
         "abbrev": "SiPM",
-        "defHTML": "A solid-state avalanche photodiode sensitive to single \\phel signals.",
+        "defHTML": "A solid-state avalanche photodiode sensitive to single photoelectron signals.",
         "defLaTeX": "A solid-state  avalanche photodiode sensitive to single \\phel signals",
         "term": "silicon photomultiplier",
         "type": "abbrev"
@@ -3153,7 +3153,7 @@
     },
     "tpc": {
         "abbrev": "TPC",
-        "defHTML": "A type of particle detector that uses an \\efield together with a sensitive volume of gas or liquid, e.g., <a href=\"#lar\">LAr</a>, to perform a \\threed reconstruction of a particle trajectory or interaction. The activity is recorded by digitizing the waveforms of current induced on the anode as the distribution of ionization charge passes by or is collected on the electrode.",
+        "defHTML": "A type of particle detector that uses an E field together with a sensitive volume of gas or liquid, e.g., <a href=\"#lar\">LAr</a>, to perform a 3D reconstruction of a particle trajectory or interaction. The activity is recorded by digitizing the waveforms of current induced on the anode as the distribution of ionization charge passes by or is collected on the electrode.",
         "defLaTeX": "A type of particle detector that uses an \\efield together with a sensitive volume of gas or liquid, e.g., \\gls{lar}, to perform a \\threed reconstruction of a particle trajectory or interaction. The activity is recorded by digitizing the waveforms of current  induced on the anode as the distribution of ionization charge passes by  or is collected on the electrode",
         "term": "time projection chamber",
         "type": "abbrev"
@@ -3300,7 +3300,7 @@
     },
     "wct": {
         "abbrev": "WCT",
-        "defHTML": "A software toolkit with data flow processing components for <a href=\"#lartpc\">LArTPC</a> noise and signal simulation, noise filtering, signal processing, and tomographic \\threed ionization activity imaging.",
+        "defHTML": "A software toolkit with data flow processing components for <a href=\"#lartpc\">LArTPC</a> noise and signal simulation, noise filtering, signal processing, and tomographic 3D ionization activity imaging.",
         "defLaTeX": "A software toolkit with data flow processing components for \\gls{lartpc} noise and signal simulation, noise filtering, signal processing, and tomographic \\threed ionization activity imaging",
         "term": "Wire-Cell Toolkit",
         "type": "abbrev"
@@ -3340,7 +3340,7 @@
         "type": "word"
     },
     "wirecell": {
-        "defHTML": "A tomographic automated \\threed neutrino event reconstruction method for <a href=\"#lartpc\">LArTPCs</a>.",
+        "defHTML": "A tomographic automated 3D neutrino event reconstruction method for <a href=\"#lartpc\">LArTPCs</a>.",
         "defLaTeX": "A tomographic automated \\threed neutrino event reconstruction method for \\glspl{lartpc}",
         "term": "Wire-Cell",
         "type": "word"

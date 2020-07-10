@@ -65,19 +65,17 @@ def gls_to_html_link(defString, gls_tag_type, dunewd_dict):
     return defString 
 
 
-def latex_into_html(defLaTeX, dunewd_dict, defs_dict):
+def latex_into_html(descr_LaTeX, dunewd_dict, defs_dict):
 
     # Replace the newcommand{} from defs.tex by the proper latex
     for def_key, def_info in defs_dict.items():
-        if def_key in defLaTeX:
-            print("Found def %s \\ in \n %s \n\n"%(def_key[1:], defLaTeX))
-
-
+        if def_key in descr_LaTeX:
+            descr_LaTeX = descr_LaTeX.replace(def_key, def_info['def_latex'])
+    
     # Replace \gls{} and \glspl{} tags with HTML <a></a> link tags
-    stringHTML = gls_to_html_link(defLaTeX, "gls", dunewd_dict)
+    stringHTML = gls_to_html_link(descr_LaTeX, "gls", dunewd_dict)
     stringHTML = gls_to_html_link(stringHTML, "glspl", dunewd_dict)
     stringHTML = stringHTML.replace("  ", " ")
-    
 
 
     # pypandoc to resolve all remaining latex-to-html issues:
@@ -120,20 +118,21 @@ def main():
 
     defs_dict = {} 
     for line in list_defs:
-        if "}[" in line:
+        if "}[" in line: # the command takes argument(s)
             def_command , sep , Nargs_and_def_latex = line.partition("}[")
             N_args_str , sep , def_latex = Nargs_and_def_latex.partition("]{")
             N_args = int(N_args_str)
             
-        else:
+        else: # no argument
             def_command , sep, def_latex  = line.partition("}{")
             N_args = 0
 
         def_latex = def_latex[:-1] if def_latex.endswith('}') else def_latex
         def_latex = def_latex.replace('\\xspace', ' ')
 
-        defs_dict[def_command] = { "N_args": N_args, "def_latex": def_latex }
-
+        if def_command:
+            defs_dict[def_command] = { "N_args": N_args, "def_latex": def_latex }
+    
     #for key , info in defs_dict.items():
     #    print("%s\t\t%d\t\t%s"%(key,info["N_args"], info["def_latex"]))
 
@@ -213,6 +212,7 @@ def main():
     
         else:
             continue 
+
 
     #===== Description in HTML =====
     # Need to have all dunewords and defs before converting to html
