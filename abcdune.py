@@ -18,6 +18,7 @@ import re
 import argparse
 import json
 import string
+import pypandoc
 
 def replace_percent_in_html_code(line):
     
@@ -64,23 +65,58 @@ def gls_to_html_link(defString, gls_tag_type, dunewd_dict):
     
     return defString 
 
+"""
+def selfref_to_html_link(defString, selfref_type, dunewd_dict):
+
+    isPlural = True if "plural" in selfref_type else False
+
+    #re_ref = re.compile(r'<span data-acronym-label="daq" data-acronym-form="singular+short">(.*?)</span>')
+    re_ref = re.compile(r'<span data-acronym-label=(.*?)</span>')
+     
+    ref_keys = re_ref.findall(defString)
+
+
+    for ref_key in ref_keys:
+
+        tagToReplace = '<span data-acronym-label="" data-acronym-form="singular+short">(.*?)</span>'
+
+
+    return 
+"""
 
 def latex_into_html(descr_LaTeX, dunewd_dict, defs_dict):
 
     # Replace the newcommand{} from defs.tex by the proper latex
     for def_key, def_info in defs_dict.items():
-        if def_key in descr_LaTeX:
+        def_key_esc = "\\" + def_key
+        if def_key_esc in descr_LaTeX:
             descr_LaTeX = descr_LaTeX.replace(def_key, def_info['def_latex'])
     
-    # Replace \gls{} and \glspl{} tags with HTML <a></a> link tags
-    stringHTML = gls_to_html_link(descr_LaTeX, "gls", dunewd_dict)
-    stringHTML = gls_to_html_link(stringHTML, "glspl", dunewd_dict)
-    stringHTML = stringHTML.replace("  ", " ")
-
-
-    # pypandoc to resolve all remaining latex-to-html issues:
+    # Replace `` quotes '' by "
+    descr_LaTeX = descr_LaTeX.replace('``','"')
+    descr_LaTeX = descr_LaTeX.replace("''",'"')
     
-    return stringHTML.rstrip(' ') + "." # adding period at the end of the HTML definition 
+    # Replace \gls{} and \glspl{} tags with HTML <a></a> link tags
+    descr_LaTeX = gls_to_html_link(descr_LaTeX, "gls", dunewd_dict)
+    descr_LaTeX = gls_to_html_link(descr_LaTeX, "glspl", dunewd_dict)
+
+    # Call pypandoc:
+    output_html = pypandoc.convert_text(descr_LaTeX, to='html5', format='latex')
+    output_html = output_html.replace("<p>", "")
+    output_html = output_html.replace("</p>", "")
+    output_html = output_html.replace("&amp;percnt;", "&percnt;")
+        
+    #print(output_html)
+    # \gls{} and \glspl{} tags replaced by <span>. Correct with <a></a> link tags
+    #stringHTML = selfref_to_html_link(output_html, "plural+short", dunewd_dict)
+
+    # Replace the &lt; by < and &gt; by > to have <a></a> tags 
+    output_html = output_html.replace("&lt;", "<")
+    output_html = output_html.replace("&gt;", ">")
+    
+    output_html = output_html.replace("  ", " ")
+
+    return output_html.rstrip(' ').rstrip('\n') 
 
 def main():
 
@@ -168,7 +204,7 @@ def main():
     # newduneabbrevs   [1]      |  [2]   |   [3]  |   [4]  |   [5]
     #__________________________________________________________________
     # 
-    # dic = [ key, [type, abbrev, term, terms , defLaTeX, defHTML ] ]
+    # dic = [ key, [type, abbrev, term, terms , termHTML, defLaTeX, defHTML ] ]
     #__________________________________________________________________
     #
     # Note: the separator for the first tags is "}{" but it is present 
@@ -184,7 +220,7 @@ def main():
             # duneword{key}{term}{ description }
             
             key , sep,  info       = line[9:].partition("}{")
-            term, sep, description = info.partition("}{") 
+            term, sep, description = info.partition("}{")
             description            = description[:-1] if description.endswith('}') else description
             defLaTeX               = description
             dunewd_dict[key]       = {"type": "word", "term": term, "defLaTeX": defLaTeX}
@@ -221,8 +257,15 @@ def main():
 
     for key , info in dunewd_dict.items():
 
+        termHTML = latex_into_html(info["term"], dunewd_dict, defs_dict)    
+        info["termHTML"] = termHTML
+        
+        if info["type"] is "abbrevs":
+            termsHTML = latex_into_html(info["terms"], dunewd_dict, defs_dict)
+            info["termsHTML"] = termsHTML
+            
         defHTML = latex_into_html(info["defLaTeX"], dunewd_dict, defs_dict)
-        info["defHTML"] = defHTML
+        info["defHTML"] = defHTML + "."
 
     #===== Export in JSON file =====
     
@@ -272,15 +315,12 @@ def main():
 
             if key.startswith(letter.lower()) or (letter is "&num;" and key[0].isdigit()):
 
-                # Format the term if referenced word (gls)
-                termHTML = gls_to_html_link(info["term"], "gls", dunewd_dict)
-
                 if info["type"] is not "word": # cases abbrev and abbrevs
 
                     content += '  <dt id = "' + key + '">' + info["abbrev"] + '</dt>\n'
-                    content += '  <dd>' + termHTML + '<br>'
+                    content += '  <dd>' + info["termHTML"] + '<br>'
                 else:
-                    content += '  <dt id = "' + key + '">' + termHTML + '</dt>\n'
+                    content += '  <dt id = "' + key + '">' + info["termHTML"] + '</dt>\n'
                     content += '  <dd>'
                 content += info["defHTML"] + '</dd>\n'
         # end of letter block
