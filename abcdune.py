@@ -22,17 +22,12 @@ import pypandoc
 
 def replace_percent_in_html_code(line):
     
-    """
-    escaped percent replaced by HTML code
-    """
     line = line.replace("\%", "&percnt;")
     return(line)
 
 def remove_comment(line):
     
-    """
-        removing all LaTeX comments (full line or end of line)
-    """
+    # removing all LaTeX comments (full line or end of line) 
     if "%" not in line:
         return(line.rstrip())
     else:
@@ -53,9 +48,11 @@ def gls_to_html_link(defString, gls_tag_type, dunewd_dict):
         
         tagToReplace = "\\" + gls_tag_type + "{" + glsTag + "}"
         
-        # The link text in HTML is either:
-        # "term" entry in dictionary if type 'word'
-        # "abbrev" entry (acronym) if type 'abbrev'
+        """
+        The link text in HTML is either:
+        "term" entry in dictionary if type 'word'
+        "abbrev" entry (acronym) if type 'abbrev'
+        """
 
         link_text = dunewd_dict[glsTag]["term"] if dunewd_dict[glsTag]["type"] is "word" else dunewd_dict[glsTag]["abbrev"]
         if isPlural:
@@ -64,25 +61,6 @@ def gls_to_html_link(defString, gls_tag_type, dunewd_dict):
         defString  = defString.replace(tagToReplace, "<a href=\"#" + glsTag + "\">" + link_text + "</a>")
     
     return defString 
-
-"""
-def selfref_to_html_link(defString, selfref_type, dunewd_dict):
-
-    isPlural = True if "plural" in selfref_type else False
-
-    #re_ref = re.compile(r'<span data-acronym-label="daq" data-acronym-form="singular+short">(.*?)</span>')
-    re_ref = re.compile(r'<span data-acronym-label=(.*?)</span>')
-     
-    ref_keys = re_ref.findall(defString)
-
-
-    for ref_key in ref_keys:
-
-        tagToReplace = '<span data-acronym-label="" data-acronym-form="singular+short">(.*?)</span>'
-
-
-    return 
-"""
 
 def latex_into_html(descr_LaTeX, dunewd_dict, defs_dict):
 
@@ -105,10 +83,6 @@ def latex_into_html(descr_LaTeX, dunewd_dict, defs_dict):
     output_html = output_html.replace("<p>", "")
     output_html = output_html.replace("</p>", "")
     output_html = output_html.replace("&amp;percnt;", "&percnt;")
-        
-    #print(output_html)
-    # \gls{} and \glspl{} tags replaced by <span>. Correct with <a></a> link tags
-    #stringHTML = selfref_to_html_link(output_html, "plural+short", dunewd_dict)
 
     # Replace the &lt; by < and &gt; by > to have <a></a> tags 
     output_html = output_html.replace("&lt;", "<")
@@ -168,9 +142,6 @@ def main():
 
         if def_command:
             defs_dict[def_command] = { "N_args": N_args, "def_latex": def_latex }
-    
-    #for key , info in defs_dict.items():
-    #    print("%s\t\t%d\t\t%s"%(key,info["N_args"], info["def_latex"]))
 
     #------------------------
     # Opening glossary.tex
@@ -209,7 +180,7 @@ def main():
     #
     # Note: the separator for the first tags is "}{" but it is present 
     # in custom LaTeX commands inside the description
-    # Parsing thus using partition("}{")
+    # Parsing thus using partition( "}{" )
 
     dunewd_dict = {}
 
@@ -218,7 +189,6 @@ def main():
         if line.startswith( 'duneword{' ):
             
             # duneword{key}{term}{ description }
-            
             key , sep,  info       = line[9:].partition("}{")
             term, sep, description = info.partition("}{")
             description            = description[:-1] if description.endswith('}') else description
@@ -228,7 +198,6 @@ def main():
         elif line.startswith( 'duneabbrev{' ):
     
             # duneabbrev{key}{abbrev}{term}{ description }
-
             key , sep, info1       = line[11:].partition("}{")
             abbrev, s, info2       = info1.partition("}{")
             term ,  s, description = info2.partition("}{")
@@ -238,7 +207,6 @@ def main():
         elif line.startswith( 'duneabbrevs{' ):
     
             # duneabbrevs{key}{abbrev}{term}{terms}{ description }
-
             key , sep, info1       = line[12:].partition("}{")
             abbrev, s, info2       = info1.partition("}{")
             term ,  s, info3       = info2.partition("}{")
@@ -249,11 +217,12 @@ def main():
         else:
             continue 
 
-
-    #===== Description in HTML =====
-    # Need to have all dunewords and defs before converting to html
-    # ===> to replace definitions into latex
-    # ===> to referenced acronyms into html links
+    """
+    ===== Description in HTML =====
+    Need to have all dunewords and defs before converting to html
+    ===> to replace definitions into latex
+    ===> to referenced acronyms into html links
+    """
 
     for key , info in dunewd_dict.items():
 
@@ -266,6 +235,13 @@ def main():
             
         defHTML = latex_into_html(info["defLaTeX"], dunewd_dict, defs_dict)
         info["defHTML"] = defHTML + "."
+
+        print(key)
+        """
+        for key_info, value in info.items():
+            print("%s: %s"%(key_info, value))
+        print("\n")
+        """
 
     #===== Export in JSON file =====
     
@@ -299,6 +275,7 @@ def main():
     for letter in abc:
         content += '<a href="#' + letter + '">' + letter + '</a>\n'
     content += r'''</p>
+    <p>Acronym not found? See <a href="https://wiki.dunescience.org/wiki/ABC_DUNE" target="_blank">wiki instructions</a> to add it.</p>
 </center>
 '''
     #==== Loop over alphabet =====
